@@ -335,13 +335,14 @@ section.bio-sec article {
     display: block;
     width: 24%;
     height: 40px;
-    background: #a6c8c3;
+    background: #50c5e2;
     line-height: 40px;
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
     text-decoration: none;
     color: black;
     font-size: 1.2em;
+    box-shadow: 0 0 60px rgba(84, 93, 143, 0.8) inset;
     transition: all 0.2s;
 }
 .content-for-homepage .nav-content a:hover {
