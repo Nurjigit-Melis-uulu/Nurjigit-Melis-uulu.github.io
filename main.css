@@ -65,6 +65,7 @@
     transform: translateX(240px);
 }
 body {
+    font-family: 'Open Sans', sans-serif;
     background-color: rgb(204, 213, 255);
 }
 .regist-window-contact {
