@@ -333,7 +333,7 @@ section.bio-sec article {
 }
 .content-for-homepage .nav-content a {
     display: block;
-    width: 25%;
+    width: 24%;
     height: 40px;
     background: #a6c8c3;
     line-height: 40px;
@@ -341,7 +341,7 @@ section.bio-sec article {
     border-right: 1px solid #838383;
     text-decoration: none;
     color: black;
-    font-size: 1.3em;
+    font-size: 1.2em;
     transition: all 0.2s;
 }
 .content-for-homepage .nav-content a:hover {
@@ -356,3 +356,6 @@ section.bio-sec article {
     background: 
         linear-gradient(to right, #23719e, #88dadd, #23719e);
 }
+.content-for-homepage .nav-content  [href*="/contact.html"] {
+    width: 28%;
+} 
