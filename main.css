@@ -345,10 +345,11 @@ section.bio-sec article {
 }
 .content-for-homepage .nav-content a:hover {
     background: rgb(69, 98, 192);
-    transform: translateY(5px);
+    transform: translateY(4px);
 }
 .content-for-homepage .nav-content a:active {
-    background: rgb(219, 111, 78);
+    background: rgb(95, 57, 121);
+    transform: translateY(10px);
 }
 .bgc-for-page {    
     background: 
