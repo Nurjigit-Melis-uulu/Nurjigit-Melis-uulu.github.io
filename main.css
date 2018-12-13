@@ -293,3 +293,64 @@ nav:hover p {
     font-size: 1.4em;
     font-family: Arial, Helvetica, sans-serif;
 }
+section.bio-sec {
+    width: 50%;
+    
+    margin: 160px auto;
+    padding: 20px 60px;
+
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 20px;
+
+    background-color: #fff;
+}
+section.bio-sec article {
+    text-align: center;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 1.2em;
+}
+.content-for-homepage {
+    width: 400px;
+    height: 20px;
+    margin: calc(10% - 10px) calc(50% - 200px);
+    text-align: center;
+}
+.content-for-homepage .welcome {
+    margin-bottom: 0; 
+    font-size: 100px;
+    color: rgb(250, 162, 0);
+}
+.content-for-homepage .nav-content {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    flex-flow: row;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.content-for-homepage .nav-content a {
+    display: block;
+    width: 25%;
+    height: 40px;
+    background: #a6c8c3;
+    line-height: 40px;
+    border-left: 1px solid #838383;
+    border-right: 1px solid #838383;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    transition: all 0.2s;
+}
+.content-for-homepage .nav-content a:hover {
+    background: rgb(69, 98, 192);
+    transform: translateY(5px);
+}
+.content-for-homepage .nav-content a:active {
+    background: rgb(219, 111, 78);
+}
+.bgc-for-page {    
+    background: 
+        linear-gradient(to right, #23719e, #5ea88c, #23719e);
+}
