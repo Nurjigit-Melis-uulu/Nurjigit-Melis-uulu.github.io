@@ -319,9 +319,10 @@ section.bio-sec article {
     text-align: center;
 }
 .content-for-homepage .welcome {
-    margin-bottom: 0; 
+    margin: 0 0 0 -18px; 
     font-size: 100px;
-    color: rgb(250, 162, 0);
+    color: white;
+    text-shadow: 5px 4px 20px rgba(0, 0, 0, 0.4);
 }
 .content-for-homepage .nav-content {
     width: 100%;
