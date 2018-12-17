@@ -1,3 +1,8 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bgc-page);
+    background-size: 100% 5000px;
+}
 .container-contact {
     width: 70%;
     margin: 100px auto;
@@ -29,7 +34,7 @@
     background-color: rgb(255, 255, 255);
 }
 .box-contact > span {
-    margin-right: 10px;
+    margin-right: 0;
 }
 .logo-contact .img-contact {
     overflow: hidden;
@@ -63,11 +68,6 @@
 }
 .box-contact:hover .logo-contact {
     transform: translateX(240px);
-}
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: radial-gradient(circle at 50px 50px, rgb(84, 89, 160), rgb(206, 217, 224), rgb(3, 53, 82));
-    background-size: 100% 5000px;
 }
 .servis {
     height: 1000px;
@@ -256,12 +256,6 @@ hr {
     color: rgb(27, 131, 126);
     text-shadow: 1px 0 20px rgb(27, 131, 126);
 }
-.footer {
-    margin: 600px 0 0 0;
-    width: 100%;
-    height: 190px;
-    background: rgb(59, 59, 59, 0.4);
-}
 .container-contact .article-contact h3 {
     text-align: center;
     font-size: 1.4em;
@@ -333,8 +327,7 @@ section.bio-sec article {
     transform: translateY(10px);
 }
 .bgc-for-page {    
-    background: 
-        linear-gradient(to right, #23719e, #88dadd, #88dadd, #23719e);
+    background: var(--bgc-welcome-page);
 }
 .content-for-homepage .nav-content  [href*="/contact.html"] {
     width: 28%;
@@ -347,6 +340,11 @@ section.bio-sec article {
     --marginR-for-h1: -18px;
     --width-for-nav-welcomePage: 400px;
     --marginR-for-nav-welcomePage: calc(50% - 200px);
+    --bgc-page: radial-gradient(circle at 50px 50px, rgb(84, 89, 160), rgb(206, 217, 224), rgb(3, 53, 82));
+    --bgc-welcome-page: linear-gradient(to right, #23719e, #88dadd, #88dadd, #23719e);
+
+    --top-margin-for-cart: 15px;
+    --auto-margin-for-cart: 15px;
 }
 @media (max-width: 700px) {
     :root {
@@ -357,6 +355,8 @@ section.bio-sec article {
         --marginR-for-h1: 0;
         --width-for-nav-welcomePage: 320px;
         --marginR-for-nav-welcomePage: auto;
+        --top-margin-for-cart: 200px;
+        --auto-margin-for-cart: auto;
     }
 }
 nav {
@@ -420,4 +420,95 @@ nav > ul > li > a:active {
     background-color: #3b00b98a;
 
     transform: translateY(10px);
+}
+.up {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom: 20px solid rgb(0, 217, 255);
+
+    position: fixed;
+    top: 500px;
+    left: 80px;
+
+    text-decoration: none;
+}
+.up > p {
+    width: 20px;
+    height: 15px;
+    margin: 20px 20px 0 -10px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.up:hover {
+    border-bottom-color: #f5ff64;
+}
+.page-mod-box {
+    width: 120px;
+    height: 20px;
+    color: #180c3d;
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.7);
+}.cart {
+    opacity: 0.89;
+    width: 190px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.5);
+    background-color: rgba(43, 43, 43, 0.603);
+    overflow: hidden;
+    padding: 10px;
+    margin: var(--top-margin-for-cart) var(--auto-margin-for-cart) 15px; 
+    justify-content: center;
+
+    animation: lorem1 900ms 1 forwards;
+}
+.cart-img {
+    float: left;
+    width: 100%;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(43, 43, 43, 0.603);
+}
+.cart-article {
+    overflow: hidden;
+    height: 260px;
+    float: left;
+}
+.cart:hover {
+    animation: cartAnima 60ms 10ms 1 forwards;
+}
+@keyframes cartAnima {
+    0% {}
+    100% {
+        transform: scale(1.04, 1.04);
+        opacity: 1;
+    }
+}
+.cart:active {
+    background-color: rgba(43, 43, 43, 0.904);
+}
+
+@keyframes lorem1 {
+    0% {}
+    25% {
+        transform: rotateY(90deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    75% {
+        transform: rotateY(270deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+.content-for-cart  {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+
+    display: flex;
+    flex-flow: row wrap;
 }
