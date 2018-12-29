@@ -358,6 +358,9 @@ section.bio-sec article {
         --top-margin-for-cart: 200px;
         --auto-margin-for-cart: auto;
     }
+    html body div.menu-box {
+        visibility: visible;
+    }
 }
 nav {
     width: 100%;
@@ -513,4 +516,54 @@ nav > ul > li > a:active {
 .active-link {
     background-color: #6428e4;
     text-decoration: underline;
+}
+div.menu-box {
+    visibility: hidden;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}
+button.menu {
+    width: 60px;
+    height: 46px;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    padding: 0 0 5px;
+    outline: none;
+    margin: 0;
+}
+div.menu-box button.menu > [class^="line-"] {
+    width: 56px;
+    height: 6px;
+    margin-top: 6px;
+    border-radius: 6px;
+    background-color: #000000;
+    transition: all .3s;
+}
+div.menu-box ul li:hover {
+    border-left: 3px solid indigo;
+}
+div.menu-box ul li:hover a {
+    color: maroon;
+}
+div.menu-box ul {
+    margin: 0;
+    padding: 1px;
+    transform: translateY(-300px);
+    transition: all 1s;
+}
+div.menu-box ul li {
+    list-style: none;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+    margin: 0 0 0 -20px;
+    transition: all .1s;
+}
+div.menu-box ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    transition: all 1s;
 }
