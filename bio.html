@@ -14,25 +14,47 @@
             <p>Up</p>
         </a>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="/index.html">Home page</a>
-            </li>
-            <li>
-                <a href="/servis.html">Servis</a>
-            </li>
-            <li>
-                <a href="/porfolio.html">Portfolio</a>
-            </li>
-            <li>
-                <a href="/bio.html" class="active-link">BIO</a>
-            </li>
-            <li>
-                <a href="/contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <button id="menu-button">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </button>
+            <div class="menu-box">
+                <ul id="show-menu">
+                    <li>
+                        <a href="/index.html">
+                            <div class="hover"></div>
+                            Home page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/servis.html">
+                            <div class="hover"></div>
+                            Servis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/porfolio.html">
+                            <div class="hover"></div>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hover-active"></div>
+                            BIO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">
+                            <div class="hover"></div>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
     <section class="bio-sec">
         <article>
@@ -63,6 +85,8 @@
         </article>
     </section>
 
+
+    <script src="main.js"></script>
 
     
 </body>
