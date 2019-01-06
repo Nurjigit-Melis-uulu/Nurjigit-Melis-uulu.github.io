@@ -7,6 +7,9 @@ let menuUl = document.querySelector('#show-menu');
 let menuBox = document.querySelector('.menu-box');
 let optionsPageBox = document.querySelector('.options'); 
 let nameBox = document.querySelector('.name-box');
+let inputFocus = document.querySelectorAll('input');
+let label = document.querySelectorAll('label');
+let email = document.querySelector('.email');
 
 menuButton.addEventListener('click', function() {
     arrayForButton.push(1);
@@ -30,12 +33,6 @@ menuButton.addEventListener('click', function() {
         nameBox.style.transform = "translate(0)";
     }
 });
-
-document.documentElement.style.setProperty('--bgc-welcome-page', "to right, #23719e, #88dadd, #88dadd, #23719e"); 
-
-let inputFocus = document.querySelectorAll('input');
-let label = document.querySelectorAll('label');
-let email = document.querySelector('.email');
 
 email.addEventListener('change', function() {
 	email.className = "mail";

@@ -1,25 +1,24 @@
 body {
     font-family: "Yu Gothic UI Semibold";
     margin: 0;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 :root {
     --width: 100%;
     --fontW-for-small: 600;
-    --height-for-nav-in-homepage: 50px;
+    --height-for-nav: 50px;
     --font-size-h1-logo: 8.7em;
     --width-article: 50%;
 }
 @media (max-width: 700px) {
     :root {
-        --height-for-nav-in-homepage: auto;
+        --height-for-nav: auto;
         --font-size-h1-logo: 4.2em;
         --width-article: 80%;
     }
 }
 @media (min-width: 701px) and (max-width: 870px) {
     :root {
-        --height-for-nav-in-homepage: auto;
+        --height-for-nav: auto;
     }
 }
 .container {
@@ -32,7 +31,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     border-top: 10px solid #34336B;
-    background: linear-gradient(to bottom , rgb(251, 251, 251) 0%, rgb(92, 91, 144) 90%);
+    background: linear-gradient(to bottom , rgb(255, 255, 255) 0%, rgb(92, 91, 144) 100%);
 }
 .container .content article {
     width: var(--width-article);
@@ -48,14 +47,15 @@ body {
     width: 100%;
     position: fixed;
     top: 35vh;
+    background: radial-gradient(circle farthest-side, rgb(34, 33, 80), transparent);
 }
 .logo-text h1 {
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
     width: 100%;
     margin: 0;
     font-size: var(--font-size-h1-logo);
     color: #fff;
     text-align: center;
-    background: radial-gradient(circle farthest-side, rgb(34, 33, 80), transparent);
 }
 .logo-text p {
     display: block;
@@ -94,7 +94,7 @@ button#menu-button > [class^="line-"] {
 }
 nav.nav div.menu-box {
     width: 100%;
-    height: var(--height-for-nav-in-homepage);
+    height: var(--height-for-nav);
     overflow: hidden;
 }
 nav.nav div.menu-box ul {
@@ -103,7 +103,7 @@ nav.nav div.menu-box ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: wrap;
     justify-content: space-around;
     transform: translateX(100%);
     transition: all 1s;
@@ -113,12 +113,10 @@ nav.nav div.menu-box ul li {
     width: 150px;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 nav.nav div.menu-box ul li a {
     display: block;
-    min-width: 100%;
-    margin: 0 auto; 
+    width: 100%;
     color: white;
     text-decoration: none;
     font-size: 1.5em;
@@ -129,8 +127,6 @@ nav.nav div.menu-box ul li div.hover {
     width: 100%;
     height: 0;
     position: absolute;
-    top: 0;
-    left: 0;
     transition: all .5s;
     background-color: rgba(155, 240, 255, 0.6);
 }
@@ -141,8 +137,6 @@ nav.nav div.menu-box ul li div.hover-active {
     width: 100%;
     height: 50px;
     position: absolute;
-    top: 0;
-    left: 0;
     background-color: rgba(106, 40, 211, 0.6);
 }
 nav.nav .name-box {
@@ -156,51 +150,6 @@ nav.nav .name-box {
     font-family: "MV boli";
     transition: all .8s ease-in-out;
     text-align: center;
-}
-.up {
-    display: block;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-bottom: 20px solid rgb(0, 217, 255);
-
-    position: fixed;
-    top: 500px;
-    left: 80px;
-
-    text-decoration: none;
-}
-.up > p {
-    width: 20px;
-    height: 15px;
-    margin: 20px 20px 0 -10px;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-.up:hover {
-    border-bottom-color: #f5ff64;
-}
-.contact-box {
-    display: block;
-    width: 70px;
-    height: 70px;
-    position: relative;
-    transition: all 1s;
-    overflow: hidden;
-    line-height: 70px;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #000000;
-}
-.contact-box img {
-    width: 70px;
-    position: absolute;
-    left: 0;
-    border-radius: 100%;
-}
-.contact-box:hover {
-    width: 150px;
-    padding-left: 70px;
 }
 input {
     color: #A1A1A1;
@@ -222,33 +171,61 @@ label {
     visibility: hidden;
 }
 .mistake input {
-  border-color: #E4442A;
+    border-color: #E4442A;
 }
 .good input {
-  border-color: green;
+    border-color: green;
 }
 .visible label {
-  visibility: visible;
+    visibility: visible;
 }
 .hidden label {
-  visibility: hidden;
+    visibility: hidden;
 }
 .mail:invalid {
-  border-bottom: 3px solid #FF7A65;
+    border-bottom: 3px solid #FF7A65;
 }
 .mail:valid {
-  border-bottom: 3px solid #07D800;
+    border-bottom: 3px solid #07D800;
 }
 form {
     display: flex;
     flex-flow: wrap;
 }
-form h1 {
+form p {
     text-align: center;
     width: 100%;
     text-align: center;
+    margin: 20px 0 0;
 }
 .column-6 {
     width: calc(50% - 20px);
     margin: 0 10px;
+}
+.link-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.link-box a {
+    width: 60px;
+    height: 64px;
+    margin: 0 10px;
+    display: block;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.link-box img {
+    width: 100%;
+    height: 64px;
+}
+.link-box p {
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.link-box a:hover {
+    transform: scale(1.2, 1.2);
 }
