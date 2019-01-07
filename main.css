@@ -31,7 +31,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     border-top: 10px solid #34336B;
-    background: linear-gradient(to bottom , rgb(255, 255, 255) 0%, rgb(92, 91, 144) 100%);
+    background: linear-gradient(to bottom , rgb(255, 255, 255) 60%, rgb(92, 91, 144) 130%);
 }
 .container .content article {
     width: var(--width-article);
