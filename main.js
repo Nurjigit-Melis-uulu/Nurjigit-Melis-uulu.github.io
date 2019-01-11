@@ -136,7 +136,8 @@ for (var i = 0; i < inputFocus.length; i++) {
 
 	if (this.value.length > 0) {
 		parentInput.classList.add("good");
-		parentInput.classList.add("hidden");
+		parentInput.classList.remove("hidden");
+		parentInput.classList.add("visible");
 	}
 	else {
 		parentInput.classList.add("mistake");
