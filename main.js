@@ -135,11 +135,11 @@ for (var i = 0; i < inputFocus.length; i++) {
 	inputFocus[i].addEventListener('change', function() {
 
 	if (this.value.length > 0) {
-		parentInput.classList.add("mistake");
+		parentInput.classList.add("good");
 		parentInput.classList.add("hidden");
 	}
 	else {
-		parentInput.classList.add("good");
+		parentInput.classList.add("mistake");
 		parentInput.classList.add("visible");
 	}
 });
