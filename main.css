@@ -1,16 +1,16 @@
 body {
-    font-family: "Yu Gothic UI Semibold";
+    font-family: "Open sans", "Yu Gothic UI Semibold";
     margin: 0;
 }
 :root {
-    --width: 100%;
-    --fontW-for-small: 600;
+    --height: 90vh;
     --height-for-nav: 50px;
     --font-size-h1-logo: 8.7em;
     --width-article: 50%;
 }
 @media (max-width: 700px) {
     :root {
+        --height: 70vh;
         --height-for-nav: auto;
         --font-size-h1-logo: 4.2em;
         --width-article: 80%;
@@ -23,7 +23,11 @@ body {
 }
 .container {
     width: 100%;
-    margin: 90vh 0;
+    margin: var(--height) 0;
+    display: none;
+}
+.show-page {
+    display: block;
 }
 .container .content {
     width: 100%;
@@ -31,7 +35,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     border-top: 10px solid #34336B;
-    background: linear-gradient(to bottom , rgb(255, 255, 255) 60%, rgb(92, 91, 144) 130%);
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(92, 91, 144) 130%);
 }
 .container .content article {
     width: var(--width-article);
@@ -147,7 +151,7 @@ nav.nav .name-box {
     color: white;
     font-size: 1.4em;
     line-height: 50px;
-    font-family: "MV boli";
+    font-family: 'Playball', cursive, "MV boli";
     transition: all .8s ease-in-out;
     text-align: center;
 }
