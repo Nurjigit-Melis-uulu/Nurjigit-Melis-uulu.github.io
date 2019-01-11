@@ -46,11 +46,11 @@ menuButton.addEventListener('click', function() {
         nameBox.style.transform = "translate(0)";
     }
 });
-
+/*
 email.addEventListener('change', function() {
 	email.className = "mail";
 });
-
+*/
 for (var i = 0; i < inputFocus.length; i++) {
 	let parentInput = inputFocus[i].parentElement;
 

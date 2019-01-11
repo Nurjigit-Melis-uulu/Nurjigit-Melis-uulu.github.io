@@ -3,34 +3,45 @@ body {
     margin: 0;
 }
 :root {
-    --height: 90vh;
+    --font-size-h1-logo: 5.2em;
     --height-for-nav: 50px;
-    --font-size-h1-logo: 8.7em;
-    --width-article: 50%;
-}
-img {
-    width: 100%;
-    margin: 50px 0 0;
-    height: calc(100vh - 50px);
+    --height-header: 200px;
+    --width: 60%;
 }
 
 /*-------Main-parameters-for-all-pages-------*/
 .container {
-    width: 60%;
-    margin: 50px auto;
+    width: 100%;
+    margin: 55px auto 0;
+    box-sizing: border-box;
 }
 .container .content {
-
+    width: var(--width);
+    margin: 0 auto;
+}
+.container .content section header {
+    width: 100%;
+    height: var(--height-header);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    line-height: var(--height-header);
+    background: radial-gradient(farthest-side at center center, #6c75a8, #373172);
+    text-shadow: 2px 2px 3px black;
+}
+.container .content section header h1 {
+    margin: 0;
+    font-size: var(--font-size-h1-logo);
 }
 
 
 /*-------@media-------*/
 @media (max-width: 700px) {
     :root {
-        --height: 70vh;
+        --width: 80%;
+        --height-header: 140px;
         --height-for-nav: auto;
-        --font-size-h1-logo: 4.2em;
-        --width-article: 80%;
+        --font-size-h1-logo: 2.8em;
     }
 }
 @media (min-width: 701px) and (max-width: 870px) {
@@ -56,7 +67,6 @@ button#menu-button > [class^="line-"] {
     margin-top: 6px;
     border-radius: 6px;
     background-color: #6fccc7;
-    box-shadow: 0 0 5px rgb(206, 217, 224, 0.4) inset;
     transition: all .3s;
 }
 nav.nav {
@@ -64,7 +74,7 @@ nav.nav {
     height: var(--height-for-nav-in-homepage);
     display: flex;
     flex-flow: row-reverse;
-    background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(14, 74, 112), rgb(31, 33, 56));
+    background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(24, 91, 133), rgb(31, 33, 56));
     position: fixed;
     top: 0;
     z-index: 1;
