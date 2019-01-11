@@ -26,58 +26,6 @@ body {
     margin: var(--height) 0;
     display: none;
 }
-.show-page {
-    display: block;
-}
-.container .content {
-    width: 100%;
-    padding: 10px 10px 200px;
-    position: absolute;
-    box-sizing: border-box;
-    border-top: 10px solid #34336B;
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 60%, rgb(92, 91, 144) 130%);
-}
-.container .content article {
-    width: var(--width-article);
-    margin: 0 auto;
-}
-.logo {
-    width: 100%;
-    height: calc(100vh - 50px);
-    position: fixed;
-    top: 50px;
-}
-.logo-text {
-    width: 100%;
-    position: fixed;
-    top: 35vh;
-    background: radial-gradient(circle farthest-side, rgb(34, 33, 80), transparent);
-}
-.logo-text h1 {
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-    width: 100%;
-    margin: 0;
-    font-size: var(--font-size-h1-logo);
-    color: #fff;
-    text-align: center;
-}
-.logo-text p {
-    display: block;
-    width: 100%;
-    margin: -20px 0 0;
-    text-align: center;
-    color: #fff;
-}
-nav.nav {
-    width: 100%;
-    height: var(--height-for-nav-in-homepage);
-    display: flex;
-    flex-flow: row-reverse;
-    background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(8, 55, 85), rgb(31, 33, 56));
-    position: fixed;
-    top: 0;
-    z-index: 1;
-}
 button#menu-button {
     width: 70px;
     height: 46px;
@@ -96,6 +44,17 @@ button#menu-button > [class^="line-"] {
     box-shadow: 0 0 5px rgb(206, 217, 224, 0.4) inset;
     transition: all .3s;
 }
+nav.nav {
+    width: 100%;
+    height: var(--height-for-nav-in-homepage);
+    display: flex;
+    flex-flow: row-reverse;
+    background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(14, 74, 112), rgb(31, 33, 56));
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 nav.nav div.menu-box {
     width: 100%;
     height: var(--height-for-nav);
@@ -106,6 +65,7 @@ nav.nav div.menu-box ul {
     height: 50px;
     padding: 0;
     margin: 0;
+    text-align: center;
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
@@ -114,17 +74,20 @@ nav.nav div.menu-box ul {
 }
 nav.nav div.menu-box ul li {
     display: inline-block;
-    width: 150px;
-    text-align: center;
+    width: 140px;
     position: relative;
 }
-nav.nav div.menu-box ul li a {
-    display: block;
+nav.nav div.menu-box ul li button {
+    border: 0;
+    padding: 0;
     width: 100%;
+    outline: none;
     color: white;
-    text-decoration: none;
+    height: inherit;
     font-size: 1.5em;
     line-height: 50px;
+    text-decoration: none;
+    background: transparent;
     text-shadow: 1px 3px 6px black;
 }
 nav.nav div.menu-box ul li div.hover {
@@ -134,7 +97,7 @@ nav.nav div.menu-box ul li div.hover {
     transition: all .5s;
     background-color: rgba(155, 240, 255, 0.6);
 }
-nav.nav div.menu-box ul li a:hover div.hover {
+nav.nav div.menu-box ul li button:hover div.hover {
     height: 50px;
 }
 nav.nav div.menu-box ul li div.hover-active {

@@ -10,88 +10,20 @@ let line1 = document.querySelector('.line-1');
     inputFocus = document.querySelectorAll('input');
     label = document.querySelectorAll('label');
     email = document.querySelector('.email');
-    homeLink = document.querySelector('#home-link');   
-    serviceLink = document.querySelector('#service-link');     
-    portfolioLink = document.querySelector('#portfolio-link');     
-    bioLink = document.querySelector('#bio-link');     
-    contactLink = document.querySelector('#contact-link');  
-    homePage = document.querySelector('.home-page');
-    servicePage = document.querySelector('.service-page');
-    portfolioPage = document.querySelector('.portfolio-page');
-    bioPage = document.querySelector('.bio-page');
-    contactPage = document.querySelector('.contact-page');
+    links = document.querySelectorAll('nav ul li button');
+    hoverDivsInLink = document.querySelectorAll('nav ul li button div');
 
-    homeLink.firstElementChild.className = "hover-active";
-    serviceLink.firstElementChild.className = "hover";
-    portfolioLink.firstElementChild.className = "hover";
-    bioLink.firstElementChild.className = "hover";
-    contactLink.firstElementChild.className = "hover";
-    bioPage.style.display = "none";
-    homePage.style.display = "block";
-    contactPage.style.display = "none";
-    servicePage.style.display = "none";
-    portfolioPage.style.display = "none";
-    
-homeLink.addEventListener('click', function() {
-    bioLink.firstElementChild.className = "hover";
-    contactLink.firstElementChild.className = "hover";
-    serviceLink.firstElementChild.className = "hover";
-    portfolioLink.firstElementChild.className = "hover";
-    homeLink.firstElementChild.className = "hover-active";
-    bioPage.style.display = "none";
-    homePage.style.display = "block";
-    contactPage.style.display = "none";
-    servicePage.style.display = "none";
-    portfolioPage.style.display = "none";
-});
-serviceLink.addEventListener('click', function() {
-    homeLink.firstElementChild.className = "hover";
-    serviceLink.firstElementChild.className = "hover-active";
-    portfolioLink.firstElementChild.className = "hover";
-    bioLink.firstElementChild.className = "hover";
-    contactLink.firstElementChild.className = "hover";
-    bioPage.style.display = "none";
-    homePage.style.display = "none";
-    contactPage.style.display = "none";
-    servicePage.style.display = "block";
-    portfolioPage.style.display = "none";
-});
-portfolioLink.addEventListener('click', function() {
-    homeLink.firstElementChild.className = "hover";
-    serviceLink.firstElementChild.className = "hover";
-    portfolioLink.firstElementChild.className = "hover-active";
-    bioLink.firstElementChild.className = "hover";
-    contactLink.firstElementChild.className = "hover";
-    bioPage.style.display = "none";
-    homePage.style.display = "none";
-    contactPage.style.display = "none";
-    servicePage.style.display = "none";
-    portfolioPage.style.display = "block";
-});
-bioLink.addEventListener('click', function() {
-    homeLink.firstElementChild.className = "hover";
-    serviceLink.firstElementChild.className = "hover";
-    portfolioLink.firstElementChild.className = "hover";
-    bioLink.firstElementChild.className = "hover-active";
-    contactLink.firstElementChild.className = "hover";
-    bioPage.style.display = "block";
-    homePage.style.display = "none";
-    contactPage.style.display = "none";
-    servicePage.style.display = "none";
-    portfolioPage.style.display = "none";
-});
-contactLink.addEventListener('click', function() {
-    homeLink.firstElementChild.className = "hover";
-    serviceLink.firstElementChild.className = "hover";
-    portfolioLink.firstElementChild.className = "hover";
-    bioLink.firstElementChild.className = "hover";
-    contactLink.firstElementChild.className = "hover-active";
-    bioPage.style.display = "none";
-    homePage.style.display = "none";
-    contactPage.style.display = "block";
-    servicePage.style.display = "none";
-    portfolioPage.style.display = "none";
-});
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+        for (let i = 0; i < hoverDivsInLink.length; i++) {
+            hoverDivsInLink[i].className = "hover";        
+        }
+
+        let parentThis = this.children;
+        parentThis[0].className = "hover-active";
+    });
+}
+
 menuButton.addEventListener('click', function() {
     arrayForButton.push(1);
     if (arrayForButton.length % 2 == 0) {
