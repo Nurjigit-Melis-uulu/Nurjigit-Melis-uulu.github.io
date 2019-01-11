@@ -140,6 +140,7 @@ for (var i = 0; i < inputFocus.length; i++) {
 	}
 	else {
 		parentInput.classList.add("mistake");
+		parentInput.classList.remove("good");
 		parentInput.classList.add("visible");
 	}
 });
