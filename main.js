@@ -18,7 +18,7 @@ for (let i = 0; i < links.length; i++) {
         for (let i = 0; i < hoverDivsInLink.length; i++) {
             hoverDivsInLink[i].className = "hover";        
         }
-
+        
         let parentThis = this.children;
         parentThis[0].className = "hover-active";
     });
@@ -27,10 +27,10 @@ for (let i = 0; i < links.length; i++) {
 menuButton.addEventListener('click', function() {
     arrayForButton.push(1);
     if (arrayForButton.length % 2 == 0) {
-        line1.style.transform = "rotate(45deg) translate(16px, 1px)";
+        line1.style.transform = "rotate(45deg) translate(16px, -2px)";
         line2.style.transform = "translateX(64px)";
         line2.style.opacity = "0";
-        line3.style.transform = "rotate(-45deg) translate(16px, -1px)";
+        line3.style.transform = "rotate(-45deg) translate(16px, 2px)";
         menuUl.style.transform = "translateX(0)";
         menuUl.style.height = "auto";
         nameBox.style.transform = "translate(-100%)";

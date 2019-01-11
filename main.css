@@ -8,6 +8,23 @@ body {
     --font-size-h1-logo: 8.7em;
     --width-article: 50%;
 }
+img {
+    width: 100%;
+    margin: 50px 0 0;
+    height: calc(100vh - 50px);
+}
+
+/*-------Main-parameters-for-all-pages-------*/
+.container {
+    width: 60%;
+    margin: 50px auto;
+}
+.container .content {
+
+}
+
+
+/*-------@media-------*/
 @media (max-width: 700px) {
     :root {
         --height: 70vh;
@@ -21,11 +38,9 @@ body {
         --height-for-nav: auto;
     }
 }
-.container {
-    width: 100%;
-    margin: var(--height) 0;
-    display: none;
-}
+
+
+/*-------Navigation-------*/
 button#menu-button {
     width: 70px;
     height: 46px;
@@ -37,7 +52,7 @@ button#menu-button {
 }
 button#menu-button > [class^="line-"] {
     width: 56px;
-    height: 6px;
+    height: 4px;
     margin-top: 6px;
     border-radius: 6px;
     background-color: #6fccc7;
@@ -118,6 +133,9 @@ nav.nav .name-box {
     transition: all .8s ease-in-out;
     text-align: center;
 }
+
+
+/*-------Form-in-contact-page-------*/
 input {
     color: #A1A1A1;
     padding-left: 5px;
