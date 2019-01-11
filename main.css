@@ -1,11 +1,13 @@
 body {
-    font-family: "Open sans", "Yu Gothic UI Semibold";
+    font-family: 'Times New Roman',"Open sans", "Yu Gothic UI Semibold";
     margin: 0;
 }
 :root {
     --font-size-h1-logo: 5.2em;
+    --widht-for-text: 180px;
     --height-for-nav: 50px;
     --height-header: 200px;
+    --auto-margin: 20px;
     --width: 60%;
 }
 
@@ -15,11 +17,12 @@ body {
     margin: 55px auto 0;
     box-sizing: border-box;
 }
-.container .content {
+.content {
     width: var(--width);
     margin: 0 auto;
+    padding: 20px;
 }
-.container .content section header {
+header {
     width: 100%;
     height: var(--height-header);
     color: white;
@@ -29,13 +32,38 @@ body {
     background: radial-gradient(farthest-side at center center, #6c75a8, #373172);
     text-shadow: 2px 2px 3px black;
 }
-.container .content section header h1 {
+header h1 {
     margin: 0;
     font-size: var(--font-size-h1-logo);
+}
+ article div {
+    display: flex;
+    flex-flow: row wrap;
+}
+.container .content section article div .user-photo-box {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background: silver;
+    margin: 10px var(--auto-margin);
+    overflow: hidden;
+}
+.container .content section article div .user-photo-box img {
+    width: 100%;
+    height: 140px;
+}
+p.flet-text {
+    width: calc(100% - var(--widht-for-text));
 }
 
 
 /*-------@media-------*/
+@media (max-width: 500px) {
+    :root {
+        --widht-for-text: 0px;
+        --auto-margin: auto;
+    }
+}
 @media (max-width: 700px) {
     :root {
         --width: 80%;
