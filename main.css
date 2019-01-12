@@ -3,9 +3,8 @@ body {
     margin: 0;
 }
 :root {
-    --font-size-h1-logo: 5.2em;
+    --font-size-h1-logo: 5em;
     --widht-for-text: 180px;
-    --height-for-nav: 50px;
     --height-header: 200px;
     --auto-margin: 20px;
     --width: 60%;
@@ -43,10 +42,11 @@ article div {
 .container .content section article div .user-photo-box {
     width: 140px;
     height: 140px;
+    overflow: hidden;
     border-radius: 100%;
     background: silver;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.342);
     margin: 10px var(--auto-margin);
-    overflow: hidden;
 }
 .container .content section article div .user-photo-box img {
     width: 100%;
@@ -63,6 +63,35 @@ footer {
 .hidden-page {
     display: none;
 }
+aside {
+    width: 300px;
+    height: calc(100vh - 50px);
+    background: silver;
+    position: fixed;
+    left: -285px;
+    top: 50px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.335);
+    transition: all 1.7s;
+}
+aside ul {
+    padding: 15px;
+    list-style: none;
+    font-size: 1.3em;
+}
+aside ul li {
+    margin: 10px 0 0;
+}
+aside button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: calc(50% - 15px);
+    border: 2px solid rgb(43, 65, 189);
+    border-radius: 100%;
+    background: white;
+    transition: all 1s;
+}
 
 
 /*-------@media-------*/
@@ -76,13 +105,7 @@ footer {
     :root {
         --width: 80%;
         --height-header: 140px;
-        --height-for-nav: auto;
-        --font-size-h1-logo: 2.8em;
-    }
-}
-@media (min-width: 701px) and (max-width: 870px) {
-    :root {
-        --height-for-nav: auto;
+        --font-size-h1-logo: 2.7em;
     }
 }
 
@@ -107,7 +130,7 @@ button#menu-button > [class^="line-"] {
 }
 nav.nav {
     width: 100%;
-    height: var(--height-for-nav-in-homepage);
+    height: auto;
     display: flex;
     flex-flow: row-reverse;
     background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(24, 91, 133), rgb(31, 33, 56));
@@ -118,7 +141,7 @@ nav.nav {
 }
 nav.nav div.menu-box {
     width: 100%;
-    height: var(--height-for-nav);
+    height: auto;
     overflow: hidden;
 }
 nav.nav div.menu-box ul {

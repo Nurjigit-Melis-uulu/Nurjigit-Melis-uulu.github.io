@@ -1,5 +1,6 @@
 const menuButton = document.querySelector('#menu-button');
-const arrayForButton = [1];
+const arrayForButtonNav = [1];
+const arrayForButtonAside = [1];
 let line1 = document.querySelector('.line-1'); 
     line2 = document.querySelector('.line-2'); 
     line3 = document.querySelector('.line-3'); 
@@ -13,6 +14,20 @@ let line1 = document.querySelector('.line-1');
     links = document.querySelectorAll('nav ul li button');
     hoverDivsInLink = document.querySelectorAll('nav ul li button div');
     containerAllPages = document.querySelector('.container');
+    buttonForAside = document.querySelector('aside button');
+
+buttonForAside.addEventListener('click', function() {
+    arrayForButtonAside.push(1);
+    if (arrayForButtonAside.length % 2 == 0) {
+        buttonForAside.parentElement.style.transform = "translate(285px)";
+        buttonForAside.style.transform = "rotateZ(180deg)"
+    }
+    else {
+        buttonForAside.parentElement.style.transform = "translate(0px)";
+        buttonForAside.style.transform = "rotateZ(0deg)"
+        arrayForButtonAside.length = 1;
+    }
+});
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
@@ -35,8 +50,8 @@ for (let i = 0; i < links.length; i++) {
 }
 
 menuButton.addEventListener('click', function() {
-    arrayForButton.push(1);
-    if (arrayForButton.length % 2 == 0) {
+    arrayForButtonNav.push(1);
+    if (arrayForButtonNav.length % 2 == 0) {
         line1.style.transform = "rotate(45deg) translate(16px, -2px)";
         line2.style.transform = "translateX(64px)";
         line2.style.opacity = "0";
@@ -88,6 +103,7 @@ for (var i = 0; i < inputFocus.length; i++) {
 	}
 });
 };
+
 /*
 darkMod.addEventListener('change', function() {
     if(this.checked == true) {
