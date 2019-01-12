@@ -31,6 +31,11 @@ buttonForAside.addEventListener('click', function() {
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
+
+        buttonForAside.parentElement.style.transform = "translate(0px)";
+        buttonForAside.style.transform = "rotateZ(0deg)"
+        arrayForButtonAside.length = 1;
+
         for (let i = 0; i < hoverDivsInLink.length; i++) {
             hoverDivsInLink[i].className = "hover";        
         }
@@ -59,6 +64,11 @@ menuButton.addEventListener('click', function() {
         menuUl.style.transform = "translateX(0)";
         menuUl.style.height = "auto";
         nameBox.style.transform = "translate(-100%)";
+        menuBox.style.height = "auto";
+        
+        buttonForAside.parentElement.style.transform = "translate(0px)";
+        buttonForAside.style.transform = "rotateZ(0deg)"
+        arrayForButtonAside.length = 1;
     }
     else {
         line1.style.transform = "rotate(0deg) translate(0)";
@@ -66,16 +76,21 @@ menuButton.addEventListener('click', function() {
         line2.style.opacity = "1";
         line3.style.transform = "rotate(0deg) translate(0)";
         menuUl.style.transform = "translateX(100%)";
-        arrayForButton.length = 1;
+        arrayForButtonNav.length = 1;
         menuUl.style.height = "50px";
         nameBox.style.transform = "translate(0)";
+        menuBox.style.height = "50px";
+        
+        buttonForAside.parentElement.style.transform = "translate(0px)";
+        buttonForAside.style.transform = "rotateZ(0deg)"
+        arrayForButtonAside.length = 1;
     }
 });
-/*
+
 email.addEventListener('change', function() {
 	email.className = "mail";
 });
-*/
+
 for (var i = 0; i < inputFocus.length; i++) {
 	let parentInput = inputFocus[i].parentElement;
 
@@ -103,14 +118,3 @@ for (var i = 0; i < inputFocus.length; i++) {
 	}
 });
 };
-
-/*
-darkMod.addEventListener('change', function() {
-    if(this.checked == true) {
-        document.documentElement.style.setProperty('--bgc-welcome-page', "to right, rgb(62, 0, 104), rgb(99, 67, 206), rgb(99, 67, 206), rgb(62, 0, 104)");
-    }
-    else {
-        document.documentElement.style.setProperty('--bgc-welcome-page', "to right, #23719e, #88dadd, #88dadd, #23719e");
-    }
-});
-*/

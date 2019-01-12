@@ -8,6 +8,7 @@ body {
     --height-header: 200px;
     --auto-margin: 20px;
     --width: 60%;
+    --height-nav: 50px;
 }
 
 /*-------Main-parameters-for-all-pages-------*/
@@ -54,19 +55,19 @@ article div {
 }
 p.flet-text {
     width: calc(100% - var(--widht-for-text));
-}
+}/*
 footer {
     background:  radial-gradient(circle at 50px 50px, #2c2f50, #226894, #2c2f50);
     width: 100%;
     height: 40px;
-}
+}*/
 .hidden-page {
     display: none;
 }
 aside {
     width: 300px;
     height: calc(100vh - 50px);
-    background: silver;
+    background: #ffffff;
     position: fixed;
     left: -285px;
     top: 50px;
@@ -87,10 +88,11 @@ aside button {
     position: absolute;
     right: -15px;
     top: calc(50% - 15px);
-    border: 2px solid rgb(43, 65, 189);
+    border: 2px solid rgb(155, 156, 216);
     border-radius: 100%;
     background: white;
-    transition: all 1s;
+    transition: all .6s;
+    outline: none;
 }
 
 
@@ -99,11 +101,13 @@ aside button {
     :root {
         --widht-for-text: 0px;
         --auto-margin: auto;
+        --height-nav: auto;
     }
 }
 @media (max-width: 700px) {
     :root {
-        --width: 80%;
+        --width: 80%;  
+        --height-nav: auto;
         --height-header: 140px;
         --font-size-h1-logo: 2.7em;
     }
@@ -130,7 +134,7 @@ button#menu-button > [class^="line-"] {
 }
 nav.nav {
     width: 100%;
-    height: auto;
+    height: var(--height-nav);
     display: flex;
     flex-flow: row-reverse;
     background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(24, 91, 133), rgb(31, 33, 56));
@@ -141,7 +145,7 @@ nav.nav {
 }
 nav.nav div.menu-box {
     width: 100%;
-    height: auto;
+    height: var(--height-nav);
     overflow: hidden;
 }
 nav.nav div.menu-box ul {
