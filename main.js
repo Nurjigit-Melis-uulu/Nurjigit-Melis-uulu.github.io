@@ -12,6 +12,7 @@ let line1 = document.querySelector('.line-1');
     email = document.querySelector('.email');
     links = document.querySelectorAll('nav ul li button');
     hoverDivsInLink = document.querySelectorAll('nav ul li button div');
+    containerAllPages = document.querySelector('.container');
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
@@ -21,6 +22,15 @@ for (let i = 0; i < links.length; i++) {
         
         let parentThis = this.children;
         parentThis[0].className = "hover-active";
+
+        let index = this.value;
+        const arrayContents = containerAllPages.children;
+
+        for (let i = 0; i < arrayContents.length; i++) {
+            arrayContents[i].style.display = "none";
+            arrayContents[5].style.display = "block";
+            arrayContents[index].style.display = "block";
+        }
     });
 }
 
