@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman',"Open sans", "Yu Gothic UI Semibold";
+    font-family: Helvetica, Arial, "Open sans", "Yu Gothic UI Semibold";
     margin: 0;
 }
 :root {
@@ -251,4 +251,16 @@ form p {
 }
 .link-box a:hover {
     transform: scale(1.2, 1.2);
+}
+form button {
+    width: 80px;
+    margin: 6px auto;
+    border: 0;
+    border-bottom: 3px solid gray;
+    border-radius: 10px;
+    background: transparent;
+}
+form button:active {
+    border: 1px solid gray;
+    margin: 7px auto;
 }
