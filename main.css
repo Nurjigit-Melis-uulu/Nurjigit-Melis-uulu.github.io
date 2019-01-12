@@ -101,15 +101,18 @@ aside button {
     :root {
         --widht-for-text: 0px;
         --auto-margin: auto;
-        --height-nav: auto;
     }
 }
 @media (max-width: 700px) {
     :root {
         --width: 80%;  
-        --height-nav: auto;
         --height-header: 140px;
         --font-size-h1-logo: 2.7em;
+    }
+}
+@media (max-width: 935px) {
+    :root {
+        --height-nav: auto;
     }
 }
 
@@ -218,7 +221,6 @@ input {
     border-radius: 10px;
     height: 40px;
     margin: 5px 0 20px;
-    opacity: .7;
 }
 input:focus {
     outline: none;
@@ -287,6 +289,15 @@ form p {
 .link-box a:hover {
     transform: scale(1.2, 1.2);
 }
+form textarea {
+    width: 80%;
+    margin: 20px 10%;
+    height: 100px;
+    resize: none;
+    border-radius: 20px;
+    border: 2px solid silver;
+    padding: 10px;
+}
 form button {
     width: 80px;
     margin: 6px auto;
@@ -294,6 +305,7 @@ form button {
     border-bottom: 3px solid gray;
     border-radius: 10px;
     background: transparent;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.424);
 }
 form button:active {
     border: 1px solid gray;
