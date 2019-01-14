@@ -14,7 +14,7 @@ let line1 = document.querySelector('.line-1');
     links = document.querySelectorAll('nav ul li button');
     hoverDivsInLink = document.querySelectorAll('nav ul li button div');
     containerAllPages = document.querySelector('.container');
-    buttonForAside = document.querySelector('aside button');
+    buttonForAside = document.querySelector('aside #show-aside');
 
 buttonForAside.addEventListener('click', function() {
     arrayForButtonAside.push(1);
@@ -48,7 +48,7 @@ for (let i = 0; i < links.length; i++) {
 
         for (let i = 0; i < arrayContents.length; i++) {
             arrayContents[i].style.display = "none";
-            arrayContents[5].style.display = "block";
+            arrayContents[6].style.display = "block";
             arrayContents[index].style.display = "block";
         }
     });

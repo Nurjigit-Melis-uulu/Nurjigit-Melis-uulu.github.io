@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 :root {
-    --font-size-h1-logo: 5em;
+    --font-size-h1-logo: 4.9em;
     --widht-for-text: 180px;
     --height-header: 200px;
     --auto-margin: 20px;
@@ -73,6 +73,7 @@ aside {
     top: 50px;
     box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.335);
     transition: all 1.7s;
+    z-index: 2;
 }
 aside ul {
     padding: 15px;
@@ -82,7 +83,7 @@ aside ul {
 aside ul li {
     margin: 10px 0 0;
 }
-aside button {
+aside button#show-aside {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -93,6 +94,30 @@ aside button {
     background: white;
     transition: all .6s;
     outline: none;
+}
+.post-box {
+    width: calc(90%);
+    height: 300px;
+    margin: 40px auto;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.post-box article {
+    width: 50%;
+    height: 300px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #39b149, #59c593);
+}
+.post-box div {
+    width: 50%;
+    height: 300px;
+}
+.post-box div img {
+    width: 100%;
+    height: 300px;
 }
 
 
