@@ -1,6 +1,13 @@
 const menuButton = document.querySelector('#menu-button');
 const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
+const arrayPagesName = [
+    {page: 'HomePage'},
+    {page: 'servicePage'},
+    {page: 'PortfolioPage'},
+    {page: 'bioPage'},
+    {page: 'contactPage'}
+]
 let line1 = document.querySelector('.line-1'); 
     line2 = document.querySelector('.line-2'); 
     line3 = document.querySelector('.line-3'); 
@@ -15,6 +22,47 @@ let line1 = document.querySelector('.line-1');
     hoverDivsInLink = document.querySelectorAll('nav ul li button div');
     containerAllPages = document.querySelector('.container');
     buttonForAside = document.querySelector('aside #show-aside');
+    submitButton = document.querySelector('#submit');
+
+
+document.documentElement.addEventListener('click', function(event) {
+  
+    const content = event.srcElement;
+     
+    const question = content.closest('.question');
+      
+      
+    
+    if (answer.tagName == 'INPUT') {
+          
+        // Disable answers
+          
+    question.querySelectorAll('input')
+    .forEach(function(answer){
+      
+        answer.disabled = true;
+            
+    });
+        
+          
+        // Check answer
+          
+    if (this.value == correctAnswers[question.dataset.id].correctAnswer) {
+            
+        alert("Answer is correct!");
+          
+    }
+          
+    else {
+            
+        alert("Answer is incorrect!");
+          
+    }
+    
+          
+    question.append(`Correct answer is ${correctAnswers[question.dataset.id].correctAnswer}`);
+    }
+});
 
 buttonForAside.addEventListener('click', function() {
     arrayForButtonAside.push(1);
@@ -28,31 +76,6 @@ buttonForAside.addEventListener('click', function() {
         arrayForButtonAside.length = 1;
     }
 });
-
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function() {
-
-        buttonForAside.parentElement.style.transform = "translate(0px)";
-        buttonForAside.style.transform = "rotateZ(0deg)"
-        arrayForButtonAside.length = 1;
-
-        for (let i = 0; i < hoverDivsInLink.length; i++) {
-            hoverDivsInLink[i].className = "hover";        
-        }
-        
-        let parentThis = this.children;
-        parentThis[0].className = "hover-active";
-
-        let index = this.value;
-        const arrayContents = containerAllPages.children;
-
-        for (let i = 0; i < arrayContents.length; i++) {
-            arrayContents[i].style.display = "none";
-            arrayContents[6].style.display = "block";
-            arrayContents[index].style.display = "block";
-        }
-    });
-}
 
 menuButton.addEventListener('click', function() {
     arrayForButtonNav.push(1);
@@ -118,3 +141,28 @@ for (var i = 0; i < inputFocus.length; i++) {
 	}
 });
 };
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+
+        buttonForAside.parentElement.style.transform = "translate(0px)";
+        buttonForAside.style.transform = "rotateZ(0deg)"
+        arrayForButtonAside.length = 1;
+
+        for (let i = 0; i < hoverDivsInLink.length; i++) {
+            hoverDivsInLink[i].className = "hover";        
+        }
+        
+        let parentThis = this.children;
+        parentThis[0].className = "hover-active";
+
+        let index = this.value;
+        const arrayContents = containerAllPages.children;
+
+        for (let i = 0; i < arrayContents.length; i++) {
+            arrayContents[i].style.display = "none";
+            arrayContents[5].style.display = "block";
+            arrayContents[index].style.display = "block";
+        }
+    });
+}

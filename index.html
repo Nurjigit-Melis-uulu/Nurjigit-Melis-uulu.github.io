@@ -6,8 +6,8 @@
     <title>Home page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
@@ -90,12 +90,12 @@
             </li>
         </ul>
         <button id="show-aside">
-            >
+            <i class="icon-angle-circled-right"></i>
         </button>
     </aside>
 
     <div class="container">
-        <div class="content">
+        <div class="content" data-page="HomePage">
             <section>
                 <header>
                     <h1>
@@ -109,7 +109,7 @@
                 <article>
                     <div>
                         <div class="user-photo-box">
-                            <img src="user.jpg" alt="">
+                            <img src="user-1.jpg" alt="">
                         </div>
                         <p class="flet-text">
                             <big>I'm</big>
@@ -117,7 +117,7 @@
                             <br>
                             <br>
 
-                            Hello! <i>I'm Nurjigit Melis uulu, Front-end developer</i> and I'm glad, because you visited my personal website. You can take more <i>Informations</i>. For example: what I give <a href="">service</a> or you can do read <a href="">about me</a>
+                            Hello! I'm Nurjigit Melis uulu, Front-end developer and I'm glad because you visited my personal website. You can take more information. For example, I read <a href="">about me</a> or <a href="">my service</a>
                         </p> 
                     </div>
 
@@ -136,7 +136,7 @@
             </section>
         </div>
 
-        <div class="content hidden-page">
+        <div class="content hidden-page" data-page="servicePage">
             <section>
                 <header>
                     <h1>
@@ -198,7 +198,7 @@
             </section>
         </div>
 
-        <div class="content hidden-page">
+        <div class="content hidden-page" data-page="PortfolioPage">
             <section>
                 <header>
                     <h1>
@@ -207,12 +207,12 @@
                 </header>
 
                 <article>
-                    Sorry. This is moment i haven't portfolio, but skoro budet.
+                    Sorry. This is moment i haven't portfolio, but will be soon.
                 </article>
             </section>
         </div>
 
-        <div class="content hidden-page">
+        <div class="content hidden-page" data-page="bioPage">
             <section>
                 <header>
                     <h1>
@@ -231,7 +231,7 @@
                         I love my family.I have three brothers.
                     </p>
                     <p>       
-                        Как я и говорил я родился и живу в городе Каракол. Я люблю свой город, он маленький. Можно легко добратся до конца города и вернутся. Но в том нет постаянной нужды, вид вся суита в базаре и в центре города. Из минусов после развала СССР было разруха, и никто не зачем не слидил. И за этого мой город грязный, дороги сломанные и там мелкие минусы. Но прогресс на месте не стоит, по тихонку все налаживаятся. 
+                        As I said, I was born and live in the city of Karakol. I love my city, it's small. You can easily get to the end of the city and return. But in that there is no constant need, the view is all the fuss in the bazaar and in the center of the city. Of the minuses after the collapse of the USSR, there was devastation, and no one was watching. And because of this, my city is dirty, the roads are broken and there are minor flaws. But there is progress, everything is getting better.
                     </p>
                     <p>        
                         I was study in Naryman school at 2007 till 2014, After, i am study in Leceum Internat-School named of Toctogyl Satylganov at 2014 till 2020.
@@ -246,7 +246,7 @@
             </section>
         </div>
 
-        <div class="content hidden-page">
+        <div class="content hidden-page" data-page="contactPage">
             <section>
                 <header>
                     <h1>
@@ -278,78 +278,25 @@
                             you can leave your contacts:
                         </p>
                         <div class="column-6">
-                            <label for="">First name</label>
-                            <input type="text" class="" placeholder="First name">
+                            <label for="Uname">First name</label>
+                            <input type="text" class="" placeholder="First name" id="Uname">
                         </div>
                         <div class="column-6">
-                            <label for="">Last name</label>
-                            <input type="text" class="" placeholder="Last name"> 
+                            <label for="Usurname">Last name</label>
+                            <input type="text" class="" placeholder="Last name" id="Usurname"> 
                         </div>
                         <div class="column-6">
-                            <label for="Address">Address</label>
-                            <input type="text" class="" placeholder="Address">
+                            <label for="Uaddress">Address</label>
+                            <input type="text" class="" placeholder="Address" id="Uaddress">
                         </div>
                         <div class="column-6">
-                            <label for="">E-mail</label>
-                            <input type="email" class="email" placeholder="Your e-mail" required>
+                            <label for="Uemail">E-mail</label>
+                            <input type="email" class="email" placeholder="Your e-mail" required id="Uemail">
                         </div>
-                        <textarea name="comment" id="" cols="30" rows="10" placeholder="Write to me your comment"></textarea>
-                        <button type="submit">Send me</button>
+                        <textarea name="comment" id="Ucomment" cols="30" rows="10" placeholder="Write to me your comment"></textarea>
+                        <button type="" id="submit">Send me</button>
                     </form>
                 </article>
-            </section>
-        </div>
-
-        <div class="content hidden-page">
-            <section>
-                <header>
-                    <h1>
-                        My blog
-                    </h1>
-                </header>
-
-                
-                <div class="post-box">
-                    <article>
-                        <h1>
-                            My city:
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam numquam optio, expedita quod, sequi eos minus nihil modi, atque quibusdam nam est illum vitae inventore sit dicta commodi! Accusantium.
-                        </p>
-                    </article>
-                    <div>
-                        <img src="welcome-to-karakol.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="post-box">
-                    <div>
-                        <img src="welcome-to-karakol.jpg" alt="">
-                    </div>
-                    <article>
-                        <h1>
-                            My city:
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam numquam optio, expedita quod, sequi eos minus nihil modi, atque quibusdam nam est illum vitae inventore sit dicta commodi! Accusantium.
-                        </p>
-                    </article>
-                </div>
-                
-                <div class="post-box">
-                    <article>
-                        <h1>
-                            My city:
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam numquam optio, expedita quod, sequi eos minus nihil modi, atque quibusdam nam est illum vitae inventore sit dicta commodi! Accusantium.
-                        </p>
-                    </article>
-                    <div>
-                        <img src="welcome-to-karakol.jpg" alt="">
-                    </div>
-                </div>
             </section>
         </div>
 

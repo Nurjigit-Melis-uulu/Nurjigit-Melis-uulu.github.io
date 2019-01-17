@@ -1,5 +1,93 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?12339891');
+    src: url('../font/fontello.eot?12339891#iefix') format('embedded-opentype'),
+         url('../font/fontello.woff2?12339891') format('woff2'),
+         url('../font/fontello.woff?12339891') format('woff'),
+         url('../font/fontello.ttf?12339891') format('truetype'),
+         url('../font/fontello.svg?12339891#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?12339891#fontello') format('svg');
+    }
+  }
+  */
+   
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   
+  .icon-cancel:before { content: '\e800'; } /* '' */
+  .icon-ok-circled2:before { content: '\e801'; } /* '' */
+  .icon-right-big:before { content: '\e802'; } /* '' */
+  .icon-gmail:before { content: '\e803'; } /* '' */
+  .icon-phone:before { content: '\e804'; } /* '' */
+  .icon-mail:before { content: '\e805'; } /* '' */
+  .icon-videocam:before { content: '\e806'; } /* '' */
+  .icon-cancel-1:before { content: '\e807'; } /* '' */
+  .icon-cancel-circled:before { content: '\e808'; } /* '' */
+  .icon-cancel-circled2:before { content: '\e809'; } /* '' */
+  .icon-download:before { content: '\e80a'; } /* '' */
+  .icon-down-circled2:before { content: '\e80b'; } /* '' */
+  .icon-download-1:before { content: '\e80c'; } /* '' */
+  .icon-download-alt:before { content: '\e80d'; } /* '' */
+  .icon-phone-squared:before { content: '\f098'; } /* '' */
+  .icon-github-circled:before { content: '\f09b'; } /* '' */
+  .icon-angle-circled-right:before { content: '\f138'; } /* '' */
+  .icon-right-circled2:before { content: '\f18e'; } /* '' */
+  .icon-telegram:before { content: '\f2c6'; } /* '' */
+  .icon-twitter-bird:before { content: '\f303'; } /* '' */
+  .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+  .icon-linkedin-circled:before { content: '\f319'; } /* '' */
+
+/*-------fontello-icons-------*/
+.icon-angle-circled-right {
+    position: absolute;
+    right: -8px;
+    top: calc(50% - 15px);
+    font-size: 30px;
+}
+
 body {
-    font-family: Helvetica, Arial, "Open sans", "Yu Gothic UI Semibold";
+    font-family: "Open sans", "Roboto", Helvetica, Arial;
     margin: 0;
 }
 :root {
@@ -89,11 +177,12 @@ aside button#show-aside {
     position: absolute;
     right: -15px;
     top: calc(50% - 15px);
-    border: 2px solid rgb(155, 156, 216);
     border-radius: 100%;
-    background: white;
     transition: all .6s;
     outline: none;
+    text-align: center;
+    background: transparent;
+    border: 0;
 }
 .post-box {
     width: calc(90%);
@@ -168,7 +257,7 @@ nav.nav {
     background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(24, 91, 133), rgb(31, 33, 56));
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 nav.nav div.menu-box {
@@ -335,4 +424,39 @@ form button {
 form button:active {
     border: 1px solid gray;
     margin: 7px auto;
+}
+
+
+.story {
+    width: 100%;
+    display: flex;
+}
+.story .user-name {
+    width: 25%;
+}
+.story .user-name::before {
+    content: "Name: ";
+    font-size: .8em;
+}
+.story .user-surname {
+    width: 25%;
+}
+.story .user-surname::before {
+    content: "Surname: ";
+    font-size: .8em;
+}
+.story .user-address::before {
+    content: "Address: ";
+    font-size: .8em;
+}
+.story .user-email::before {
+    content: "Email: ";
+    font-size: .8em;
+}
+.story .user-comment {
+    width: 100%;
+}
+.story .user-comment::before {
+    content: "Your comment: ";
+    font-size: .8em;
 }
