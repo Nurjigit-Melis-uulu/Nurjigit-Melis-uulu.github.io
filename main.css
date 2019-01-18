@@ -180,7 +180,6 @@ aside ul li a {
     border: 0;
     background: transparent;
     font-size: 1.4em;
-    text-align: left;
     transition: all 1s;
 }
 aside ul li a::after {
@@ -192,11 +191,12 @@ aside ul li a::after {
     transition: all 1s; 
 }
 aside ul li a:hover {
-    padding-left: 30px;
+    transform: translateX(30px);
 }
 aside ul li:hover a::after {
     width: 90%;
     background: #FF7A65;
+    transform: translateX(-30px);
 }
 aside button#show-aside {
     width: 30px;
@@ -451,39 +451,4 @@ form button {
 form button:active {
     border: 1px solid gray;
     margin: 7px auto;
-}
-
-
-.story {
-    width: 100%;
-    display: flex;
-}
-.story .user-name {
-    width: 25%;
-}
-.story .user-name::before {
-    content: "Name: ";
-    font-size: .8em;
-}
-.story .user-surname {
-    width: 25%;
-}
-.story .user-surname::before {
-    content: "Surname: ";
-    font-size: .8em;
-}
-.story .user-address::before {
-    content: "Address: ";
-    font-size: .8em;
-}
-.story .user-email::before {
-    content: "Email: ";
-    font-size: .8em;
-}
-.story .user-comment {
-    width: 100%;
-}
-.story .user-comment::before {
-    content: "Your comment: ";
-    font-size: .8em;
 }
