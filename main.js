@@ -25,54 +25,15 @@ let line1 = document.querySelector('.line-1');
     submitButton = document.querySelector('#submit');
 
 
-document.documentElement.addEventListener('click', function(event) {
-  
-    const content = event.srcElement;
-     
-    const question = content.closest('.question');
-      
-      
-    
-    if (answer.tagName == 'INPUT') {
-          
-        // Disable answers
-          
-    question.querySelectorAll('input')
-    .forEach(function(answer){
-      
-        answer.disabled = true;
-            
-    });
-        
-          
-        // Check answer
-          
-    if (this.value == correctAnswers[question.dataset.id].correctAnswer) {
-            
-        alert("Answer is correct!");
-          
-    }
-          
-    else {
-            
-        alert("Answer is incorrect!");
-          
-    }
-    
-          
-    question.append(`Correct answer is ${correctAnswers[question.dataset.id].correctAnswer}`);
-    }
-});
-
 buttonForAside.addEventListener('click', function() {
     arrayForButtonAside.push(1);
     if (arrayForButtonAside.length % 2 == 0) {
-        buttonForAside.parentElement.style.transform = "translate(285px)";
-        buttonForAside.style.transform = "rotateZ(180deg)"
+        buttonForAside.parentElement.style.transform = "translate(185px)";
+        buttonForAside.style.transform = "rotateY(180deg)"
     }
     else {
         buttonForAside.parentElement.style.transform = "translate(0px)";
-        buttonForAside.style.transform = "rotateZ(0deg)"
+        buttonForAside.style.transform = "rotateY(0deg)"
         arrayForButtonAside.length = 1;
     }
 });
