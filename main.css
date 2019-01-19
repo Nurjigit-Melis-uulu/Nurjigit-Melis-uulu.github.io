@@ -124,7 +124,7 @@ header h1 {
     margin: 0;
     font-size: var(--font-size-h1-logo);
 }
-article div {
+article div.box-user {
     display: flex;
     flex-flow: row wrap;
 }
@@ -452,4 +452,88 @@ form button {
 form button:active {
     border: 1px solid gray;
     margin: 7px auto;
+}
+
+/*-------animations-corousel-in-services-------*/
+.example {
+    width: 40%;
+    margin: 10px auto 100px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+.example .corousel-box {
+    height: 200px;
+    position: relative;
+    background: #d8eaff81;
+    margin: 0 0 10px;
+    overflow: hidden;
+}
+.example .corousel-box .corousel {
+    height: 1000px;
+    position: absolute;
+    transition: all 1.3s;
+}
+.example .corousel-box .corousel img {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 -4px;
+}
+.example .content {
+    width: 100%;
+    margin: 0 auto;
+    transform: rotateX(30deg) scale(1.2, 1.2);
+    background: #d8eaff81;
+    padding: 0;
+}
+.example .content .box-services {
+    height: 180px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.example .content .box-services div {
+    position: absolute;
+    top: 60px;
+    border: 3px solid teal;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+.example .box-services ul {
+    height: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: all 1.2s;
+}
+.example .box-services ul li {
+    display: block;
+    height: inherit;
+    line-height: 50px;
+    opacity: .5;
+    font-size: .8em;
+    transition: all 1.2s;
+}
+.example .content .box-services .active-li {
+    font-size: 1.3em;
+    opacity: 1;
+}
+.example .content button {
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin: 5px 0;
+    outline: none;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    border: 0;
+    transform: scaleX(1.02)
+}
+.example .content button:active {
+    transform: translateY(4px);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+    transform: scaleX(1) translateY(3px);
+}
+.example .content button:disabled {
+    opacity: .6;
 }

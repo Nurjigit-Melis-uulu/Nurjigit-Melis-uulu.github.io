@@ -150,3 +150,82 @@ navLinks.forEach(function(navLink) {
         event.preventDefault();
     });
 });
+
+let ul = document.querySelector('.box-services ul');
+let corouselInService = document.querySelector('.corousel');
+let downButton = document.querySelector('#down');
+let upButton = document.querySelector('#up');
+let translateYForcorouselInService = 0;
+let translateY = 0;
+let valueArray = 0;
+const lis = ul.children;
+
+upButton.addEventListener('click', function() {
+    translateY += 60;
+    valueArray -= 1;
+
+    ul.style.transform = "translateY(" + translateY + "px)";
+
+    if (valueArray == 0) {
+        upButton.disabled = true;
+        downButton.disabled = false;
+    }   
+    else {
+        upButton.disabled = false;
+    } 
+    if (valueArray == 4) {
+        downButton.disabled = true;
+        upButton.disabled = false;
+    }
+    else {
+        downButton.disabled = false;
+    }
+
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].className =  "";
+        lis[valueArray].className = "active-li";
+    }
+
+    translateYForcorouselInService += 200;
+    corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+});
+downButton.addEventListener('click', function() {
+    translateY -= 60;
+    valueArray += 1;
+
+    ul.style.transform = "translateY(" + translateY + "px)";
+
+    if (valueArray == 0) {
+        upButton.disabled = true;
+        downButton.disabled = false;
+    }   
+    else {
+        upButton.disabled = false;
+    } 
+    if (valueArray == 4) {
+        downButton.disabled = true;
+        upButton.disabled = false;
+    }
+    else {
+        downButton.disabled = false;
+    }
+    
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].className =  "";
+        lis[valueArray].className = "active-li";
+    }
+    
+    translateYForcorouselInService -= 200;
+    corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+});
+
+if (valueArray == 0) {
+    upButton.disabled = true;
+    downButton.disabled = false;
+}    
+if (valueArray == 4) {
+    downButton.disabled = true;
+    upButton.disabled = false;
+}
+
+console.log(valueArray);
