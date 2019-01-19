@@ -198,7 +198,7 @@ aside ul li a:hover {
 }
 aside ul li:hover a::after {
     width: 100%;
-    background: #FF7A65;
+    background: rgb(255, 184, 118);
     transform: translateX(-60px);
 }
 aside button#show-aside {
@@ -474,24 +474,24 @@ form button:active {
     margin: 10px auto 100px;
     transform-style: preserve-3d;
     perspective: 800px;
-}
+}/*
 .example .corousel-box {
-    height: 200px;
+    height: 160px;
     position: relative;
     background: #d8eaff81;
     margin: 0 0 10px;
     overflow: hidden;
 }
 .example .corousel-box .corousel {
-    height: 1000px;
+    height: 800px;
     position: absolute;
     transition: all 1.3s;
 }
 .example .corousel-box .corousel img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     margin: 0 0 -4px;
-}
+}*/
 .example .content {
     width: 100%;
     margin: 0 auto;

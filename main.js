@@ -186,8 +186,8 @@ upButton.addEventListener('click', function() {
         lis[valueArray].className = "active-li";
     }
 
-    translateYForcorouselInService += 200;
-    corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+    //translateYForcorouselInService += 160;
+    //corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
 });
 downButton.addEventListener('click', function() {
     translateY -= 60;
@@ -215,8 +215,8 @@ downButton.addEventListener('click', function() {
         lis[valueArray].className = "active-li";
     }
     
-    translateYForcorouselInService -= 200;
-    corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+    //translateYForcorouselInService -= 160;
+    //corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
 });
 
 if (valueArray == 0) {
