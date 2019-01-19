@@ -91,9 +91,12 @@ body {
     margin: 0;
 }
 :root {
+    --line-height-for-corousel: 60px;
     --font-size-h1-logo: 4.9em;
+    --font-size-corousel: 1.3em;
     --widht-for-text: 180px;
     --height-header: 200px;
+    --width-corousel: 40%;
     --auto-margin: 20px;
     --width: 60%;
     --height-nav: 50px;
@@ -243,6 +246,8 @@ aside button#show-aside {
     :root {
         --widht-for-text: 0px;
         --auto-margin: auto;
+        --width-corousel: 100%;
+        --line-height-for-corousel: 30px;
     }
 }
 @media (max-width: 700px) {
@@ -250,11 +255,20 @@ aside button#show-aside {
         --width: 80%;  
         --height-header: 140px;
         --font-size-h1-logo: 2.7em;
+        --width-corousel: 100%;
+        --line-height-for-corousel: 35px;
     }
 }
 @media (max-width: 935px) {
     :root {
         --height-nav: auto;
+        --width-corousel: 85%;
+        --font-size-corousel: 1em;
+    }
+}
+@media (max-width: 1090px) {
+    :root {
+        --width-corousel: 50%;
     }
 }
 
@@ -456,7 +470,7 @@ form button:active {
 
 /*-------animations-corousel-in-services-------*/
 .example {
-    width: 40%;
+    width: var(--width-corousel);
     margin: 10px auto 100px;
     transform-style: preserve-3d;
     perspective: 800px;
@@ -482,7 +496,7 @@ form button:active {
     width: 100%;
     margin: 0 auto;
     transform: rotateX(30deg) scale(1.2, 1.2);
-    background: #d8eaff81;
+    background: #c4dfff81;
     padding: 0;
 }
 .example .content .box-services {
@@ -505,17 +519,18 @@ form button:active {
     padding: 0;
     margin: 0;
     transition: all 1.2s;
+    box-sizing: border-box;
 }
 .example .box-services ul li {
     display: block;
     height: inherit;
-    line-height: 50px;
+    line-height: var(--line-height-for-corousel);
     opacity: .5;
     font-size: .8em;
     transition: all 1.2s;
 }
 .example .content .box-services .active-li {
-    font-size: 1.3em;
+    font-size: var(--font-size-corousel);
     opacity: 1;
 }
 .example .content button {
@@ -535,5 +550,5 @@ form button:active {
     transform: scaleX(1) translateY(3px);
 }
 .example .content button:disabled {
-    opacity: .6;
+    background: rgba(178, 182, 200, 0.657);
 }
