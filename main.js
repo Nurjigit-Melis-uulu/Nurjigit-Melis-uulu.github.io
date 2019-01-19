@@ -28,7 +28,7 @@ let line1 = document.querySelector('.line-1');
 buttonForAside.addEventListener('click', function() {
     arrayForButtonAside.push(1);
     if (arrayForButtonAside.length % 2 == 0) {
-        buttonForAside.parentElement.style.transform = "translate(185px)";
+        buttonForAside.parentElement.style.transform = "translate(195px)";
         buttonForAside.style.transform = "rotateY(180deg)"
     }
     else {
@@ -127,3 +127,26 @@ for (let i = 0; i < links.length; i++) {
         }
     });
 }
+
+const navLinks = document.querySelectorAll('nav a');
+const pages = document.querySelectorAll('container content');
+
+let activeLink = navLinks[0]; //Home
+
+navLinks.forEach(function(navLink) {
+    navLink.addEventListener('click', function() {
+        
+        activeLink.className = "";
+
+        document.getElementById(activeLink.href.split('#').pop()).className = ""
+       
+
+        activeLink = this;
+
+        activeLink.className ="active";
+
+        document.getElementById(activeLink.href.split('#').pop()).className = "active"
+
+        event.preventDefault();
+    });
+});

@@ -164,7 +164,7 @@ aside {
     z-index: 2;
 }
 aside ul {
-    padding: 15px;
+    padding: 0 0 0 15px;
     list-style: none;
 }
 aside ul li {
@@ -185,18 +185,18 @@ aside ul li a {
 aside ul li a::after {
     content: "";
     display: block;
-    width: 20%;
+    width: 0%;
     height: 2px;
     background: rgb(35, 53, 149);
     transition: all 1s; 
 }
 aside ul li a:hover {
-    transform: translateX(30px);
+    padding-left: 50px;
 }
 aside ul li:hover a::after {
-    width: 90%;
+    width: 100%;
     background: #FF7A65;
-    transform: translateX(-30px);
+    transform: translateX(-60px);
 }
 aside button#show-aside {
     width: 30px;
@@ -210,6 +210,7 @@ aside button#show-aside {
     text-align: center;
     background: transparent;
     border: 0;
+    background: #fff;
 }
 .post-box {
     width: calc(90%);
