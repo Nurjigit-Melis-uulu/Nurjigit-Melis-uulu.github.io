@@ -1,13 +1,6 @@
 const menuButton = document.querySelector('#menu-button');
 const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
-const arrayPagesName = [
-    {page: 'HomePage'},
-    {page: 'servicePage'},
-    {page: 'PortfolioPage'},
-    {page: 'bioPage'},
-    {page: 'contactPage'}
-]
 let line1 = document.querySelector('.line-1'); 
     line2 = document.querySelector('.line-2'); 
     line3 = document.querySelector('.line-3'); 
@@ -23,7 +16,7 @@ let line1 = document.querySelector('.line-1');
     containerAllPages = document.querySelector('.container');
     buttonForAside = document.querySelector('aside #show-aside');
     submitButton = document.querySelector('#submit');
-    ul = document.querySelector('.box-services ul');
+    ulInService = document.querySelector('.box-services ul');
     corouselInService = document.querySelector('.corousel');
     downButton = document.querySelector('#down');
     upButton = document.querySelector('#up');
@@ -35,46 +28,22 @@ let line1 = document.querySelector('.line-1');
 buttonForAside.addEventListener('click', function() {
     arrayForButtonAside.push(1);
     if (arrayForButtonAside.length % 2 == 0) {
-        buttonForAside.parentElement.style.transform = "translate(195px)";
-        buttonForAside.style.transform = "rotateY(180deg)"
+        activeAside(); 
     }
     else {
-        buttonForAside.parentElement.style.transform = "translate(0px)";
-        buttonForAside.style.transform = "rotateY(0deg)"
-        arrayForButtonAside.length = 1;
+        defaultAside();
     }
 });
 
 menuButton.addEventListener('click', function() {
     arrayForButtonNav.push(1);
-    if (arrayForButtonNav.length % 2 == 0) {
-        line1.style.transform = "rotate(45deg) translate(16px, -2px)";
-        line2.style.transform = "translateX(64px)";
-        line2.style.opacity = "0";
-        line3.style.transform = "rotate(-45deg) translate(16px, 2px)";
-        menuUl.style.transform = "translateX(0)";
-        menuUl.style.height = "auto";
-        nameBox.style.transform = "translate(-100%)";
-        menuBox.style.height = "auto";
-        
-        buttonForAside.parentElement.style.transform = "translate(0px)";
-        buttonForAside.style.transform = "rotateZ(0deg)"
-        arrayForButtonAside.length = 1;
+    if (arrayForButtonNav.length == 2) {
+        activeNav();
+        defaultAside();
     }
     else {
-        line1.style.transform = "rotate(0deg) translate(0)";
-        line2.style.transform = "translateX(0)";
-        line2.style.opacity = "1";
-        line3.style.transform = "rotate(0deg) translate(0)";
-        menuUl.style.transform = "translateX(100%)";
-        arrayForButtonNav.length = 1;
-        menuUl.style.height = "50px";
-        nameBox.style.transform = "translate(0)";
-        menuBox.style.height = "50px";
-        
-        buttonForAside.parentElement.style.transform = "translate(0px)";
-        buttonForAside.style.transform = "rotateZ(0deg)"
-        arrayForButtonAside.length = 1;
+        defaultNav();
+        defaultAside();
     }
 });
 
@@ -135,65 +104,23 @@ for (let i = 0; i < links.length; i++) {
     });
 }
 */
-const lis = ul.children;
+const lis = ulInService.children;
 
 upButton.addEventListener('click', function() {
     translateY += 60;
     valueArray -= 1;
 
-    ul.style.transform = "translateY(" + translateY + "px)";
+    ulInService.style.transform = "translateY(" + translateY + "px)";
 
-    if (valueArray == 0) {
-        upButton.disabled = true;
-        downButton.disabled = false;
-    }   
-    else {
-        upButton.disabled = false;
-    } 
-    if (valueArray == 4) {
-        downButton.disabled = true;
-        upButton.disabled = false;
-    }
-    else {
-        downButton.disabled = false;
-    }
-
-    for (let i = 0; i < lis.length; i++) {
-        lis[i].className =  "";
-        lis[valueArray].className = "active-li";
-    }
-
-    //translateYForcorouselInService += 160;
-    //corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+    checkButtonInService()
 });
 downButton.addEventListener('click', function() {
     translateY -= 60;
     valueArray += 1;
 
-    ul.style.transform = "translateY(" + translateY + "px)";
+    ulInService.style.transform = "translateY(" + translateY + "px)";
 
-    if (valueArray == 0) {
-        upButton.disabled = true;
-        downButton.disabled = false;
-    }   
-    else {
-        upButton.disabled = false;
-    } 
-    if (valueArray == 4) {
-        downButton.disabled = true;
-        upButton.disabled = false;
-    }
-    else {
-        downButton.disabled = false;
-    }
-    
-    for (let i = 0; i < lis.length; i++) {
-        lis[i].className =  "";
-        lis[valueArray].className = "active-li";
-    }
-    
-    //translateYForcorouselInService -= 160;
-    //corouselInService.style.transform = "translateY(" + translateYForcorouselInService + "px)"; 
+    checkButtonInService()
 });
 
 if (valueArray == 0) {
@@ -241,3 +168,57 @@ navLinks.forEach(function(navLink) {
     event.preventDefault();
   });
 });
+
+
+
+function defaultNav() {
+    line1.style.transform = "rotate(0deg) translate(0)";
+    line2.style.transform = "translateX(0)";
+    line2.style.opacity = "1";
+    line3.style.transform = "rotate(0deg) translate(0)";
+    menuUl.style.transform = "translateX(100%)";
+    arrayForButtonNav.length = 1;
+    menuUl.style.height = "50px";
+    nameBox.style.transform = "translate(0)";
+    menuBox.style.height = "50px";
+}
+function activeNav() {
+    line1.style.transform = "rotate(45deg) translate(16px, -2px)";
+    line2.style.transform = "translateX(64px)";
+    line2.style.opacity = "0";
+    line3.style.transform = "rotate(-45deg) translate(16px, 2px)";
+    menuUl.style.transform = "translateX(0)";
+    menuUl.style.height = "auto";
+    nameBox.style.transform = "translate(-100%)";
+    menuBox.style.height = "auto";
+}
+function activeAside() {
+    buttonForAside.parentElement.style.transform = "translate(195px)";
+    buttonForAside.style.transform = "rotateY(180deg)"
+}
+function defaultAside() {
+    buttonForAside.parentElement.style.transform = "translate(0px)";
+    buttonForAside.style.transform = "rotateZ(0deg)"
+    arrayForButtonAside.length = 1;
+}
+function checkButtonInService() {
+    if (valueArray == 0) {
+        upButton.disabled = true;
+        downButton.disabled = false;
+    }   
+    else {
+        upButton.disabled = false;
+    } 
+    if (valueArray == 4) {
+        downButton.disabled = true;
+        upButton.disabled = false;
+    }
+    else {
+        downButton.disabled = false;
+    }
+    
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].className =  "";
+        lis[valueArray].className = "active-li";
+    }
+}
