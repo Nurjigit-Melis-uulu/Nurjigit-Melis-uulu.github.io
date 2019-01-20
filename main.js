@@ -23,6 +23,13 @@ let line1 = document.querySelector('.line-1');
     containerAllPages = document.querySelector('.container');
     buttonForAside = document.querySelector('aside #show-aside');
     submitButton = document.querySelector('#submit');
+    ul = document.querySelector('.box-services ul');
+    corouselInService = document.querySelector('.corousel');
+    downButton = document.querySelector('#down');
+    upButton = document.querySelector('#up');
+    translateYForcorouselInService = 0;
+    translateY = 0;
+    valueArray = 0;
 
 
 buttonForAside.addEventListener('click', function() {
@@ -102,7 +109,7 @@ for (var i = 0; i < inputFocus.length; i++) {
 	}
 });
 };
-
+/*
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
 
@@ -127,37 +134,7 @@ for (let i = 0; i < links.length; i++) {
         }
     });
 }
-
-const navLinks = document.querySelectorAll('nav a');
-const pages = document.querySelectorAll('container content');
-
-let activeLink = navLinks[0]; //Home
-
-navLinks.forEach(function(navLink) {
-    navLink.addEventListener('click', function() {
-        
-        activeLink.className = "";
-
-        document.getElementById(activeLink.href.split('#').pop()).className = ""
-       
-
-        activeLink = this;
-
-        activeLink.className ="active";
-
-        document.getElementById(activeLink.href.split('#').pop()).className = "active"
-
-        event.preventDefault();
-    });
-});
-
-let ul = document.querySelector('.box-services ul');
-let corouselInService = document.querySelector('.corousel');
-let downButton = document.querySelector('#down');
-let upButton = document.querySelector('#up');
-let translateYForcorouselInService = 0;
-let translateY = 0;
-let valueArray = 0;
+*/
 const lis = ul.children;
 
 upButton.addEventListener('click', function() {
@@ -228,4 +205,39 @@ if (valueArray == 4) {
     upButton.disabled = false;
 }
 
-console.log(valueArray);
+const navLinks = document.querySelectorAll('nav a');
+const content = document.querySelectorAll('.content');
+
+let activeLink = navLinks[0]; // Home
+
+navLinks.className = "";
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].className = "hover";
+}
+
+//active home page in begin
+activeLink.className = "hover-active";
+document
+  .getElementById(activeLink.href.split('#').pop())
+  .className = "active content";
+
+navLinks.forEach(function(navLink) {
+  navLink.addEventListener('click', function(event) {
+    // Deactivate current page
+    activeLink.className = "hover";
+    document
+      .getElementById(activeLink.href.split('#').pop())
+      .className = "content";
+
+    // Set new page
+    activeLink = this;
+
+    // Activate new page
+    activeLink.className = "hover-active";
+    document
+      .getElementById(activeLink.href.split('#').pop())
+      .className = "active content";
+
+    event.preventDefault();
+  });
+});

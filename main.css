@@ -112,6 +112,7 @@ body {
     width: var(--width);
     margin: 0 auto 30px;
     padding: 20px;
+    display: none;
 }
 header {
     width: 100%;
@@ -152,9 +153,10 @@ footer {
     width: 100%;
     height: 40px;
 }*/
-.hidden-page {
-    display: none;
+body .active {
+    display: block;
 }
+/*-------Aside-------*/
 aside {
     width: 200px;
     height: calc(100vh - 50px);
@@ -214,30 +216,6 @@ aside button#show-aside {
     background: transparent;
     border: 0;
     background: #fff;
-}
-.post-box {
-    width: calc(90%);
-    height: 300px;
-    margin: 40px auto;
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-}
-.post-box article {
-    width: 50%;
-    height: 300px;
-    padding: 10px 40px;
-    box-sizing: border-box;
-    background: linear-gradient(to right, #39b149, #59c593);
-}
-.post-box div {
-    width: 50%;
-    height: 300px;
-}
-.post-box div img {
-    width: 100%;
-    height: 300px;
 }
 
 
@@ -324,7 +302,7 @@ nav.nav div.menu-box ul li {
     width: 140px;
     position: relative;
 }
-nav.nav div.menu-box ul li button {
+nav.nav div.menu-box ul li a {
     border: 0;
     padding: 0;
     width: 100%;
@@ -344,10 +322,10 @@ nav.nav div.menu-box ul li div.hover {
     transition: all .5s;
     background-color: rgba(155, 240, 255, 0.6);
 }
-nav.nav div.menu-box ul li button:hover div.hover {
+nav.nav div.menu-box ul li a.hover:hover div {
     height: 50px;
 }
-nav.nav div.menu-box ul li div.hover-active {
+nav.nav div.menu-box ul li a.hover-active div {
     width: 100%;
     height: 50px;
     position: absolute;
