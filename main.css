@@ -87,7 +87,7 @@
 }
 
 body {
-    font-family: "Open sans", "Roboto", Helvetica, Arial;
+    font-family: "Hind Madurai","Open sans", "Roboto", Helvetica, Arial;
     margin: 0;
 }
 :root {
@@ -113,6 +113,7 @@ body {
     margin: 0 auto 30px;
     padding: 20px;
     display: none;
+    font-size: 1.2em;
 }
 header {
     width: 100%;
@@ -155,67 +156,6 @@ footer {
 }*/
 body .active {
     display: block;
-}
-/*-------Aside-------*/
-aside {
-    width: 200px;
-    height: calc(100vh - 50px);
-    background: #ffffff;
-    position: fixed;
-    left: -195px;
-    top: 50px;
-    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.335);
-    transition: all 1.7s;
-    z-index: 2;
-}
-aside ul {
-    padding: 0 0 0 15px;
-    list-style: none;
-}
-aside ul li {
-    margin: 10px 0 0;
-    transition: all 1s;
-}
-aside ul li a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    width: 100%;
-    height: 30px;
-    border: 0;
-    background: transparent;
-    font-size: 1.4em;
-    transition: all 1s;
-}
-aside ul li a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    background: rgb(35, 53, 149);
-    transition: all 1s; 
-}
-aside ul li a:hover {
-    padding-left: 50px;
-}
-aside ul li:hover a::after {
-    width: 100%;
-    background: rgb(255, 184, 118);
-    transform: translateX(-60px);
-}
-aside button#show-aside {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: -20px;
-    top: calc(50% - 15px);
-    border-radius: 100%;
-    transition: all .6s;
-    outline: none;
-    text-align: center;
-    background: transparent;
-    border: 0;
-    background: #fff;
 }
 
 
@@ -332,7 +272,7 @@ nav.nav div.menu-box ul li a.hover-active div {
     background-color: rgba(106, 40, 211, 0.6);
 }
 nav.nav .name-box {
-    width: 130px;
+    width: 150px;
     height: 50px;
     position: absolute;
     left: 0;

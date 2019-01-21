@@ -14,7 +14,6 @@ let line1 = document.querySelector('.line-1');
     links = document.querySelectorAll('nav ul li button');
     hoverDivsInLink = document.querySelectorAll('nav ul li button div');
     containerAllPages = document.querySelector('.container');
-    buttonForAside = document.querySelector('aside #show-aside');
     submitButton = document.querySelector('#submit');
     ulInService = document.querySelector('.box-services ul');
     corouselInService = document.querySelector('.corousel');
@@ -25,25 +24,13 @@ let line1 = document.querySelector('.line-1');
     valueArray = 0;
 
 
-buttonForAside.addEventListener('click', function() {
-    arrayForButtonAside.push(1);
-    if (arrayForButtonAside.length % 2 == 0) {
-        activeAside(); 
-    }
-    else {
-        defaultAside();
-    }
-});
-
 menuButton.addEventListener('click', function() {
     arrayForButtonNav.push(1);
     if (arrayForButtonNav.length == 2) {
         activeNav();
-        defaultAside();
     }
     else {
         defaultNav();
-        defaultAside();
     }
 });
 
@@ -191,15 +178,6 @@ function activeNav() {
     menuUl.style.height = "auto";
     nameBox.style.transform = "translate(-100%)";
     menuBox.style.height = "auto";
-}
-function activeAside() {
-    buttonForAside.parentElement.style.transform = "translate(195px)";
-    buttonForAside.style.transform = "rotateY(180deg)"
-}
-function defaultAside() {
-    buttonForAside.parentElement.style.transform = "translate(0px)";
-    buttonForAside.style.transform = "rotateZ(0deg)"
-    arrayForButtonAside.length = 1;
 }
 function checkButtonInService() {
     if (valueArray == 0) {
