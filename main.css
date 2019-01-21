@@ -92,14 +92,16 @@ body {
 }
 :root {
     --line-height-for-corousel: 60px;
-    --font-size-h1-logo: 4.5em;
+    --widht-for-li-in-nav: 140px;
+    --widht-for-div-in-nav: 100%;
     --font-size-corousel: 1.3em;
+    --font-size-h1-logo: 4.5em;
     --widht-for-text: 180px;
     --height-header: 200px;
     --width-corousel: 40%;
     --auto-margin: 20px;
-    --width: 60%;
     --height-nav: 50px;
+    --width: 60%;
 }
 
 /*-------Main-parameters-for-all-pages-------*/
@@ -177,6 +179,18 @@ body .active {
         --line-height-for-corousel: 35px;
     }
 }
+@media (max-width: 796px) { 
+    :root {
+        --widht-for-li-in-nav: 100%;
+        --widht-for-div-in-nav: 200px;
+    }
+    nav.nav div.menu-box ul li a div.hover {
+        left: calc(50% - 100px);
+    }
+    nav.nav div.menu-box ul li a div.hover-active {
+        left: calc(50% - 100px);
+    }
+}
 @media (max-width: 935px) {
     :root {
         --height-nav: auto;
@@ -239,7 +253,7 @@ nav.nav div.menu-box ul {
 }
 nav.nav div.menu-box ul li {
     display: inline-block;
-    width: 140px;
+    width: var(--widht-for-li-in-nav);
     position: relative;
 }
 nav.nav div.menu-box ul li a {
@@ -256,8 +270,8 @@ nav.nav div.menu-box ul li a {
     text-shadow: 1px 3px 6px black;
     box-sizing: border-box;
 }
-nav.nav div.menu-box ul li div.hover {
-    width: 100%;
+nav.nav div.menu-box ul li a div.hover {
+    width: var(--widht-for-div-in-nav);
     height: 0;
     position: absolute;
     transition: all .5s;
@@ -272,7 +286,7 @@ nav.nav div.menu-box ul li a.hover-active {
     text-decoration: underline;
 }
 nav.nav div.menu-box ul li a.hover-active div {
-    width: 100%;
+    width: var(--widht-for-div-in-nav);
     height: 50px;
     position: absolute;
     border-right: 1px solid #002383;
