@@ -97,7 +97,7 @@ body {
     --font-size-corousel: 1.3em;
     --font-size-h1-logo: 4.5em;
     --widht-for-text: 180px;
-    --height-header: 200px;
+    --height-header: calc(100vh - 50px);
     --width-corousel: 40%;
     --auto-margin: 20px;
     --height-nav: 50px;
@@ -107,7 +107,7 @@ body {
 /*-------Main-parameters-for-all-pages-------*/
 .container {
     width: 100%;
-    margin: 55px auto 0;
+    margin: 50px auto 0;
     box-sizing: border-box;
 }
 .content {
@@ -119,11 +119,10 @@ body {
 }
 header {
     width: 100%;
-    height: var(--height-header);
+    height: 20vh;
     color: white;
     text-align: center;
-    border-radius: 6px;
-    line-height: var(--height-header);
+    line-height: 20vh;
     background: radial-gradient(farthest-side at center center, #6c75a8, #373172);
     text-shadow: 2px 2px 3px black;
 }
@@ -146,7 +145,6 @@ article div.box-user {
 }
 .container .content section article div .user-photo-box img {
     width: 100%;
-    height: 140px;
 }
 p.flet-text {
     width: calc(100% - var(--widht-for-text));

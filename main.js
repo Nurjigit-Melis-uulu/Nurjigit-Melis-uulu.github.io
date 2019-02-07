@@ -136,7 +136,7 @@ navLinks.forEach(function(navLink) {
     document
     .getElementById(activeLink.href.split('#').pop())
     .className = "active content";
-  navLink.addEventListener('click', function(event) {
+    navLink.addEventListener('click', function(event) {
     // Deactivate current page
     activeLink.className = "hover";
     document
@@ -200,3 +200,4 @@ function checkButtonInService() {
         lis[valueArray].className = "active-li";
     }
 }
+
