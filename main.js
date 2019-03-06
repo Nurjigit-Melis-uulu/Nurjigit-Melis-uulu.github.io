@@ -24,16 +24,6 @@ let line1 = document.querySelector('.line-1');
     valueArray = 0;
 
 
-menuButton.addEventListener('click', function() {
-    arrayForButtonNav.push(1);
-    if (arrayForButtonNav.length == 2) {
-        activeNav();
-    }
-    else {
-        defaultNav();
-    }
-});
-
 email.addEventListener('change', function() {
 	email.className = "mail";
 });
@@ -127,18 +117,13 @@ let activeLink = navLinks[0]; // Home
 navLinks.className = "";
 
 navLinks.forEach(function(navLink) {
-    for (let i = 0; i < navLinks.length; i++) {
-        navLinks[i].className = "hover";
-    }
 
     //active home page in begin
-    activeLink.className = "hover-active";
     document
     .getElementById(activeLink.href.split('#').pop())
     .className = "active content";
     navLink.addEventListener('click', function(event) {
     // Deactivate current page
-    activeLink.className = "hover";
     document
       .getElementById(activeLink.href.split('#').pop())
       .className = "content";

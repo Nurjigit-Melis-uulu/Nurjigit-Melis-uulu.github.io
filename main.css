@@ -107,7 +107,6 @@ body {
 /*-------Main-parameters-for-all-pages-------*/
 .container {
     width: 100%;
-    margin: 50px auto 0;
     box-sizing: border-box;
 }
 .content {
@@ -116,9 +115,9 @@ body {
 }
 header {
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 40px);
     color: white;
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
     background: radial-gradient(farthest-side at center center, #6c75a8, #373172);
     text-shadow: 2px 2px 3px black;
@@ -207,104 +206,65 @@ section {
 
 
 /*-------Navigation-------*/
-button#menu-button {
-    width: 70px;
-    height: 46px;
-    background: transparent;
-    border: 0;
-    padding: 0 0 5px;
-    outline: none;
-    margin: 0 20px 0 10px;
+nav {
+  width: 100%;
+  height: 40px;
+  background: #16263F;
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  z-index: 100;
 }
-button#menu-button > [class^="line-"] {
-    width: 56px;
-    height: 4px;
-    margin-top: 6px;
-    border-radius: 6px;
-    background-color: #6fccc7;
-    transition: all .3s;
+nav ul {
+  margin: 0 40px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-transform: lowercase;
 }
-nav.nav {
-    width: 100%;
-    height: var(--height-nav);
-    display: flex;
-    flex-flow: row-reverse;
-    background:  radial-gradient(circle at 50px 50px, rgb(31, 33, 56), rgb(24, 91, 133), rgb(31, 33, 56));
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+nav ul li {
+  cursor: pointer;
+  margin: 0 20px;
 }
-nav.nav div.menu-box {
-    width: 100%;
-    height: var(--height-nav);
-    overflow: hidden;
+nav ul li a {
+  position: relative;
+  height: 20px;
+  text-decoration: none;
+  color: white;
 }
-nav.nav div.menu-box ul {
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: all 1s;
+ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transition: all .6s;
 }
-nav.nav div.menu-box ul li {
-    display: inline-block;
-    width: var(--widht-for-li-in-nav);
-    position: relative;
+ul li a:hover::after {
+  width: 100%;
+  left: 0;
+  transition: all .3s;
 }
-nav.nav div.menu-box ul li a {
-    border: 0;
-    padding: 0;
-    width: 100%;
-    outline: none;
-    color: white;
-    height: inherit;
-    font-size: 1.5em;
-    line-height: 50px;
-    text-decoration: none;
-    background: transparent;
-    text-shadow: 1px 3px 6px black;
-    box-sizing: border-box;
+.logo {
+  width: 100px;
+  text-align: center;
 }
-nav.nav div.menu-box ul li a div.hover {
-    width: var(--widht-for-div-in-nav);
-    height: 0;
-    position: absolute;
-    transition: all .5s;
-    background-color: rgba(74, 174, 255, 0.109);
-    border-right: 1px solid #4369d1;
-    border-left: 1px solid #4369d1; 
-}
-nav.nav div.menu-box ul li a.hover:hover div {
-    height: 50px;
-}
-nav.nav div.menu-box ul li a.hover-active {
-    text-decoration: underline;
-}
-nav.nav div.menu-box ul li a.hover-active div {
-    width: var(--widht-for-div-in-nav);
-    height: 50px;
-    position: absolute;
-    border-right: 1px solid #002383;
-    border-left: 1px solid #002383; 
-    background-color: rgba(106, 40, 211, 0.205);
-}
-nav.nav .name-box {
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    color: white;
-    font-size: 1.4em;
-    line-height: 50px;
-    font-family: 'Playball', cursive, "MV boli";
-    transition: all .8s ease-in-out;
-    text-align: center;
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav {
+    justify-content: center;
+  }
 }
 
 
