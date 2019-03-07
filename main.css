@@ -161,50 +161,6 @@ section {
 }
 
 
-/*-------@media-------*/
-@media (max-width: 500px) {
-    :root {
-        --widht-for-text: 0px;
-        --auto-margin: auto;
-        --width-corousel: 100%;
-        --line-height-for-corousel: 30px;
-    }
-}
-@media (max-width: 700px) {
-    :root {
-        --width: 80%;  
-        --height-header: 140px;
-        --font-size-h1-logo: 2.7em;
-        --width-corousel: 100%;
-        --line-height-for-corousel: 35px;
-    }
-}
-@media (max-width: 796px) { 
-    :root {
-        --widht-for-li-in-nav: 100%;
-        --widht-for-div-in-nav: 200px;
-    }
-    nav.nav div.menu-box ul li a div.hover {
-        left: calc(50% - 100px);
-    }
-    nav.nav div.menu-box ul li a div.hover-active {
-        left: calc(50% - 100px);
-    }
-}
-@media (max-width: 935px) {
-    :root {
-        --height-nav: auto;
-        --width-corousel: 85%;
-        --font-size-corousel: 1em;
-    }
-}
-@media (max-width: 1090px) {
-    :root {
-        --width-corousel: 50%;
-    }
-}
-
-
 /*-------Navigation-------*/
 nav {
   width: 100%;
@@ -257,14 +213,6 @@ ul li a:hover::after {
 .logo {
   width: 100px;
   text-align: center;
-}
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-  nav {
-    justify-content: center;
-  }
 }
 
 
@@ -435,4 +383,66 @@ form button:active {
 }
 .example .corousel button:disabled {
     background: rgba(178, 182, 200, 0.657);
+}
+
+
+/*-------@media-------*/
+@media (max-width: 500px) {
+    :root {
+        --widht-for-text: 0px;
+        --auto-margin: auto;
+        --width-corousel: 100%;
+        --line-height-for-corousel: 30px;
+    }
+}
+@media (max-width: 700px) {
+    :root {
+        --width: 80%;  
+        --height-header: 140px;
+        --font-size-h1-logo: 2.7em;
+        --width-corousel: 100%;
+        --line-height-for-corousel: 35px;
+    }
+}
+@media (max-width: 796px) { 
+    :root {
+        --widht-for-li-in-nav: 100%;
+        --widht-for-div-in-nav: 200px;
+    }
+    nav.nav div.menu-box ul li a div.hover {
+        left: calc(50% - 100px);
+    }
+    nav.nav div.menu-box ul li a div.hover-active {
+        left: calc(50% - 100px);
+    }
+}
+@media (max-width: 935px) {
+    :root {
+        --height-nav: auto;
+        --width-corousel: 85%;
+        --font-size-corousel: 1em;
+    }
+}
+@media (max-width: 1090px) {
+    :root {
+        --width-corousel: 50%;
+    }
+}
+@media (max-width: 600px) {
+    header div {
+        font-size: .6em;
+    }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+    header div {
+        font-size: .8em;
+    }
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav {
+    justify-content: center;
+  }
 }
