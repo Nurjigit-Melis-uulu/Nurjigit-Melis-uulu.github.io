@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Home page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Playball|Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Faster+One|Nova+Square|Tienne" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
-    <link rel="icon" href="N.ico" type="images/x-icon">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Playball|Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Faster+One|Nova+Square|Tienne"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind+Madurai"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="N.ico" type="images/x-icon" />
+  </head>
+  <body>
     <nav>
-        <div className="logo">
-            NMU
-        </div>
+      <div class="logo">
+        Nurjigit
+      </div>
+      <ul>
+        <li>
+          <a href="#homePage" class="hover-active">Home</a>
+        </li>
+        <li>
+          <a href="#servicePage">Services</a>
+        </li>
+        <li>
+          <a href="#portfolioPage">Our works</a>
+        </li>
+        <li>
+          <a href="#bioPage">About us</a>
+        </li>
+        <li>
+          <a href="#contactPage">Contacts</a>
+        </li>
+      </ul>
+      <button id="menu-button">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <div class="drawer">
         <ul>
           <li>
-            <a href="#homePage">Home</a>
+            <a href="#homePage" class="active-link">Home</a>
           </li>
           <li>
             <a href="#servicePage">Services</a>
           </li>
           <li>
-            <a href="#portfolioPage" >Our works</a>
+            <a href="#portfolioPage">Our works</a>
           </li>
           <li>
             <a href="#bioPage">About us</a>
@@ -34,221 +65,254 @@
             <a href="#contactPage">Contacts</a>
           </li>
         </ul>
+      </div>
+      <div class="back-drop"></div>
     </nav>
 
     <div class="container">
-        <div class="content" id="homePage">
-
+      <div class="content" id="homePage">
         <header>
-            <div>
-                <h1>
-                    <span class="font-size-level-2">hello, i'm</span> <br>
-                    <span class="font-size-level-1">Nurjigit</span> <br>
-                    <span class="font-size-level-2">Melis uulu</span> <br>
-                    <span class="font-size-level-3">front-end developer</span> <br>
-                </h1>
-                <!-- <p class="font-size-level-2">hello, i am</p>
+          <div>
+            <h1>
+              <span class="font-size-level-2">hello, i'm</span> <br />
+              <span class="font-size-level-1">Nurjigit</span> <br />
+              <span class="font-size-level-2">Melis uulu</span> <br />
+              <span class="font-size-level-3">front-end developer</span> <br />
+            </h1>
+            <!-- <p class="font-size-level-2">hello, i am</p>
                 <h1>Nurjigit</h1>
                 <p class="font-size-level-2">Melis uulu<p>
                 <p class="font-size-level-1">front-end developer</p> -->
-            </div>
-            <img src="coding-in-laptop.jpg" alt="">
+          </div>
+          <img src="coding-in-laptop.jpg" alt="" />
         </header>
-        
-            <section>
 
-                <br>
-                <hr>
+        <section>
+          <article></article>
+        </section>
+      </div>
 
-                <article>
+      <div class="content" id="servicePage">
+        <header>
+          <div>
+            <h1>
+              <span class="font-size-level-2">the best</span> <br />
+              <span class="font-size-level-1">services</span> <br />
+              <span class="font-size-level-2">for you</span> <br />
+            </h1>
+          </div>
+          <img src="fsplfpqbcz.jpg" alt="" />
+        </header>
 
-                </article>
-            </section>
-        </div>
+        <section>
+          <article>
+            <p>
+              <big>I give the best service for you!</big>
 
-        <div class="content" id="servicePage">
-            <header>
-                <div>
-                    <h1>
-                        <span class="font-size-level-2">the best</span> <br>
-                        <span class="font-size-level-1">services</span> <br>
-                        <span class="font-size-level-2">for you</span> <br>
-                    </h1>
+              <br />
+              <br />
+
+              I offer professional Front-end services along with custom
+              development and customization. E-commerce or presentation website.
+            </p>
+            I offer the following services:
+
+            <div class="example">
+              <div class="corousel">
+                <div class="box-services">
+                  <div>
+                    <ul>
+                      <li class="active-li">
+                        Front-end development
+                      </li>
+                      <li>
+                        Beautiful design
+                      </li>
+                      <li>
+                        Css animations
+                      </li>
+                      <li>
+                        Full website leyout
+                      </li>
+                      <li>
+                        JavaScripts React.js
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <img src="fsplfpqbcz.jpg" alt="">
-            </header>
 
-            <section>
-                <article>
-                    <p>
-                        <big>I give the best service for you!</big>
+                <button id="up">Up</button>
 
-                        <br>
-                        <br>
-                        
-                        I offer professional Front-end services along with custom development and customization. E-commerce or presentation website. 
-                    </p>
-                        I offer the following services:
+                <button id="down">Down</button>
+              </div>
+            </div>
 
-                    
-                    <div class="example">
-                        <div class="corousel">
+            <p>
+              I am the first time in this area, but I provide a full cycle of
+              development including analysis, research, design, programming,
+              testing.
 
-                            <div class="box-services">
-                                <div>
-                                    <ul>
-                                        <li class="active-li">
-                                            Front-end development
-                                        </li>
-                                        <li>
-                                            Beautiful design
-                                        </li>
-                                        <li>
-                                            Css animations
-                                        </li>
-                                        <li>
-                                            Full website leyout
-                                        </li>
-                                        <li>
-                                            JavaScripts React.js
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+              <br />
+              <br />
 
-                            <button id="up">Up</button>
+              I like to approach projects with the mindset to focus on the
+              solution that delivers fast, cost-effective results without
+              compromising on code quality.
 
-                            <button id="down">Down</button>
+              <br />
+              <br />
 
-                        </div>
-                    </div>
+              In the end, (client satisfaction, privacy, & confidentiality)
+              contribution to my clients’ success, is the biggest win.
+            </p>
+          </article>
+        </section>
+      </div>
 
-                    <p>
-                        I am the first time in this area, but I provide a full cycle of development including analysis, research, design, programming, testing. 
+      <div class="content" id="portfolioPage">
+        <header>
+          <div>
+            <h1>
+              <span class="font-size-level-2">my</span> <br />
+              <span class="font-size-level-1">works</span> <br />
+            </h1>
+          </div>
+          <img src="GettyImages-832775192.jpg" alt="" />
+        </header>
 
-                        <br>
-                        <br>
+        <section>
+          <article>
+            <p>
+              Sorry. This is moment i haven't portfolio, but will be soon.
+            </p>
+          </article>
+        </section>
+      </div>
 
-                        I like to approach projects with the mindset to focus on the solution that delivers fast, cost-effective results without compromising on code quality. 
+      <div class="content" id="bioPage">
+        <header>
+          <div>
+            <h1>
+              <span class="font-size-level-2">my</span> <br />
+              <span class="font-size-level-1">biography</span> <br />
+            </h1>
+          </div>
+        </header>
 
-                        <br>
-                        <br>
+        <section>
+          <article>
+            <p>
+              I (Nurjigit) know that I am special and there's no one else out
+              there that's like me... so enjoy! (smile)
+            </p>
+            <p>
+              I was born in Karakol on February 23, 2002. I had a very simple
+              and happy childhood.
+            </p>
+            <p>
+              I love my family.I have three brothers.
+            </p>
+            <p>
+              As I said, I was born and live in the city of Karakol. I love my
+              city, it's small. You can easily get to the end of the city and
+              return. But in that there is no constant need, the view is all the
+              fuss in the bazaar and in the center of the city. Of the minuses
+              after the collapse of the USSR, there was devastation, and no one
+              was watching. And because of this, my city is dirty, the roads are
+              broken and there are minor flaws. But there is progress,
+              everything is getting better.
+            </p>
+            <p>
+              I was study in Naryman school at 2007 till 2014, After, i am study
+              in Leceum Internat-School named of Toctogyl Satylganov at 2014
+              till 2020.
+            </p>
+            <p>
+              At 2018-2019 i was study in "IT Academy".
+            </p>
+            <p>
+              I am Front-end devoloper.
+            </p>
+          </article>
+        </section>
+      </div>
 
-                        In the end, (client satisfaction, privacy, & confidentiality) contribution to my clients’ success, is the biggest win.
-                    </p>
-                </article>
-            </section>
-        </div>
+      <div class="content" id="contactPage">
+        <section>
+          <article>
+            <div class="link-box">
+              <p>
+                You would find me by these contacts:
+              </p>
+              <a href="#" title="Telegram">
+                <img src="Telegram.png" alt="" />
+              </a>
+              <a href="#" title="Linkedin">
+                <img src="linkedin.png" alt="" />
+              </a>
+              <a href="#" title="GitHub">
+                <img src="GitHub.jpg" alt="" />
+              </a>
+              <a href="#" title="Gmail">
+                <img src="Gmail.png" alt="" />
+              </a>
+            </div>
 
-        <div class="content" id="portfolioPage">
-            <header>
-                <div>
-                    <h1>
-                        <span class="font-size-level-2">my</span> <br>
-                        <span class="font-size-level-1">works</span> <br>
-                    </h1>
-                </div>
-                <img src="GettyImages-832775192.jpg" alt="">
-            </header>
-            
-            <section>
-                <article>
-                    <p>
-                        Sorry. This is moment i haven't portfolio, but will be soon.
-                    </p>
-                </article>
-            </section>
-        </div>
-
-        <div class="content" id="bioPage">
-            <header>
-                <div>
-                    <h1>
-                        <span class="font-size-level-2">my</span> <br>
-                        <span class="font-size-level-1">biography</span> <br>
-                    </h1>
-                </div>
-            </header>
-
-            <section>
-                <article>
-                    <p>
-                        I (Nurjigit) know that I am special and there's no one else out there that's like me... so enjoy! (smile)
-                    </p>
-                    <p>        
-                        I was born in Karakol on February 23, 2002. I had a very simple and happy childhood. 
-                    </p>
-                    <p>
-                        I love my family.I have three brothers.
-                    </p>
-                    <p>       
-                        As I said, I was born and live in the city of Karakol. I love my city, it's small. You can easily get to the end of the city and return. But in that there is no constant need, the view is all the fuss in the bazaar and in the center of the city. Of the minuses after the collapse of the USSR, there was devastation, and no one was watching. And because of this, my city is dirty, the roads are broken and there are minor flaws. But there is progress, everything is getting better.
-                    </p>
-                    <p>        
-                        I was study in Naryman school at 2007 till 2014, After, i am study in Leceum Internat-School named of Toctogyl Satylganov at 2014 till 2020.
-                    </p>
-                    <p>
-                        At 2018-2019 i was study in "IT Academy".
-                    </p>
-                    <p>      
-                        I am Front-end devoloper.
-                    </p>
-                </article>
-            </section>
-        </div>
-
-        <div class="content" id="contactPage">
-            <section>
-                <article>
-                    <div class="link-box">
-                        <p>
-                            You would find me by these contacts:
-                        </p>
-                        <a href="#" title="Telegram">
-                            <img src="Telegram.png" alt="">
-                        </a>
-                        <a href="#" title="Linkedin">
-                            <img src="linkedin.png" alt="">
-                        </a>
-                        <a href="#" title="GitHub">
-                            <img src="GitHub.jpg" alt="">
-                        </a>
-                        <a href="#" title="Gmail">
-                            <img src="Gmail.png" alt="">
-                        </a>
-                    </div>
-
-                    <form action="" method="get">
-                        <p>
-                            you can leave your contacts:
-                        </p>
-                        <div class="column-6">
-                            <label for="Uname">First name</label>
-                            <input type="text" class="" placeholder="First name" id="Uname">
-                        </div>
-                        <div class="column-6">
-                            <label for="Usurname">Last name</label>
-                            <input type="text" class="" placeholder="Last name" id="Usurname"> 
-                        </div>
-                        <div class="column-6">
-                            <label for="Uaddress">Address</label>
-                            <input type="text" class="" placeholder="Address" id="Uaddress">
-                        </div>
-                        <div class="column-6">
-                            <label for="Uemail">E-mail</label>
-                            <input type="email" class="email" placeholder="Your e-mail" required id="Uemail">
-                        </div>
-                        <textarea name="comment" id="Ucomment" cols="30" rows="10" placeholder="Write to me your comment"></textarea>
-                        <button type="" id="submit">Send me</button>
-                    </form>
-                </article>
-            </section>
-        </div>
+            <form action="" method="get">
+              <p>
+                you can leave your contacts:
+              </p>
+              <div class="column-6">
+                <label for="Uname">First name</label>
+                <input
+                  type="text"
+                  class=""
+                  placeholder="First name"
+                  id="Uname"
+                />
+              </div>
+              <div class="column-6">
+                <label for="Usurname">Last name</label>
+                <input
+                  type="text"
+                  class=""
+                  placeholder="Last name"
+                  id="Usurname"
+                />
+              </div>
+              <div class="column-6">
+                <label for="Uaddress">Address</label>
+                <input
+                  type="text"
+                  class=""
+                  placeholder="Address"
+                  id="Uaddress"
+                />
+              </div>
+              <div class="column-6">
+                <label for="Uemail">E-mail</label>
+                <input
+                  type="email"
+                  class="email"
+                  placeholder="Your e-mail"
+                  required
+                  id="Uemail"
+                />
+              </div>
+              <textarea
+                name="comment"
+                id="Ucomment"
+                cols="30"
+                rows="10"
+                placeholder="Write to me your comment"
+              ></textarea>
+              <button type="" id="submit">Send me</button>
+            </form>
+          </article>
+        </section>
+      </div>
     </div>
-    
-    
 
     <script src="main.js"></script>
-    
-</body>
+  </body>
 </html>

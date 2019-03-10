@@ -1,59 +1,70 @@
 const menuButton = document.querySelector('#menu-button');
 const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
-let line1 = document.querySelector('.line-1'); 
-    line2 = document.querySelector('.line-2'); 
-    line3 = document.querySelector('.line-3'); 
-    menuUl = document.querySelector('#show-menu');
-    menuBox = document.querySelector('.menu-box');
-    optionsPageBox = document.querySelector('.options'); 
-    nameBox = document.querySelector('.name-box');
-    inputFocus = document.querySelectorAll('input');
-    label = document.querySelectorAll('label');
-    email = document.querySelector('.email');
-    links = document.querySelectorAll('nav ul li button');
-    hoverDivsInLink = document.querySelectorAll('nav ul li button div');
-    containerAllPages = document.querySelector('.container');
-    submitButton = document.querySelector('#submit');
-    ulInService = document.querySelector('.box-services ul');
-    corouselInService = document.querySelector('.corousel');
-    downButton = document.querySelector('#down');
-    upButton = document.querySelector('#up');
-    translateYForcorouselInService = 0;
-    translateY = 0;
-    valueArray = 0;
+let menuUl = document.querySelector('#show-menu');
+let menuBox = document.querySelector('.menu-box');
+let optionsPageBox = document.querySelector('.options');
+let inputFocus = document.querySelectorAll('input');
+let label = document.querySelectorAll('label');
+let email = document.querySelector('.email');
+let containerAllPages = document.querySelector('.container');
+let submitButton = document.querySelector('#submit');
+let ulInService = document.querySelector('.box-services ul');
+let corouselInService = document.querySelector('.corousel');
+let downButton = document.querySelector('#down');
+let upButton = document.querySelector('#up');
+let translateYForcorouselInService = 0;
+let translateY = 0;
+let valueArray = 0;
+let drawer = document.querySelector('nav .drawer');
+let boll = false;
+let backDrop = document.querySelector('.back-drop');
 
 
-email.addEventListener('change', function() {
-	email.className = "mail";
+backDrop.addEventListener('click', function() {
+    drawer.style.transform = "translate(-100%)";
+    backDrop.style.display = "none";
+});
+
+menuButton.addEventListener('click', function() {
+    boll = !boll;
+
+    if (boll) {
+        drawer.style.transform = "translateX(0)";
+        backDrop.style.display = "block";
+    } else {
+        drawer.style.transform = "translate(-100%)";
+    }
+});
+
+email.addEventListener('change', function () {
+    email.className = "mail";
 });
 
 for (var i = 0; i < inputFocus.length; i++) {
-	let parentInput = inputFocus[i].parentElement;
+    let parentInput = inputFocus[i].parentElement;
 
-	inputFocus[i].addEventListener('input', function() {
-	if (this.value.length > 0) {
-		parentInput.classList.add("visible");
-		parentInput.classList.remove("hidden");
-	}
-	else {
-		parentInput.classList.add("hidden");
-		parentInput.classList.remove("visible");
-	}
-});
-	inputFocus[i].addEventListener('change', function() {
+    inputFocus[i].addEventListener('input', function () {
+        if (this.value.length > 0) {
+            parentInput.classList.add("visible");
+            parentInput.classList.remove("hidden");
+        } else {
+            parentInput.classList.add("hidden");
+            parentInput.classList.remove("visible");
+        }
+    });
+    inputFocus[i].addEventListener('change', function () {
 
-	if (this.value.length > 0) {
-		parentInput.classList.add("good");
-		parentInput.classList.remove("hidden");
-		parentInput.classList.add("visible");
-	}
-	else {
-		parentInput.classList.add("mistake");
-		parentInput.classList.remove("good");
-		parentInput.classList.add("visible");
-	}
-});
+        if (this.value.length > 0) {
+            parentInput.classList.add("good");
+            parentInput.classList.remove("hidden");
+            parentInput.classList.add("visible");
+        } else {
+            parentInput.classList.add("mistake");
+            parentInput.classList.remove("good");
+            parentInput.classList.add("visible");
+        }
+    });
 };
 /*
 for (let i = 0; i < links.length; i++) {
@@ -83,7 +94,7 @@ for (let i = 0; i < links.length; i++) {
 */
 const lis = ulInService.children;
 
-upButton.addEventListener('click', function() {
+upButton.addEventListener('click', function () {
     translateY += 60;
     valueArray -= 1;
 
@@ -91,7 +102,7 @@ upButton.addEventListener('click', function() {
 
     checkButtonInService()
 });
-downButton.addEventListener('click', function() {
+downButton.addEventListener('click', function () {
     translateY -= 60;
     valueArray += 1;
 
@@ -103,7 +114,7 @@ downButton.addEventListener('click', function() {
 if (valueArray == 0) {
     upButton.disabled = true;
     downButton.disabled = false;
-}    
+}
 if (valueArray == 4) {
     downButton.disabled = true;
     upButton.disabled = false;
@@ -116,73 +127,48 @@ let activeLink = navLinks[0]; // Home
 
 navLinks.className = "";
 
-navLinks.forEach(function(navLink) {
+navLinks.forEach(function (navLink) {
 
     //active home page in begin
     document
-    .getElementById(activeLink.href.split('#').pop())
-    .className = "active content";
-    navLink.addEventListener('click', function(event) {
-    // Deactivate current page
-    document
-      .getElementById(activeLink.href.split('#').pop())
-      .className = "content";
+        .getElementById(activeLink.href.split('#').pop())
+        .className = "active content";
+    navLink.addEventListener('click', function (event) {
+        // Deactivate current page
+        activeLink.className = "";
+        document
+            .getElementById(activeLink.href.split('#').pop())
+            .className = "content";
 
-    // Set new page
-    activeLink = this;
+        // Set new page
+        activeLink = this;
 
-    // Activate new page
-    activeLink.className = "hover-active";
-    document
-      .getElementById(activeLink.href.split('#').pop())
-      .className = "active content";
+        // Activate new page
+        activeLink.className = "active-link";
+        document
+            .getElementById(activeLink.href.split('#').pop())
+            .className = "active content";
 
-    event.preventDefault();
-  });
+        event.preventDefault();
+    });
 });
 
-
-
-function defaultNav() {
-    line1.style.transform = "rotate(0deg) translate(0)";
-    line2.style.transform = "translateX(0)";
-    line2.style.opacity = "1";
-    line3.style.transform = "rotate(0deg) translate(0)";
-    menuUl.style.transform = "translateX(100%)";
-    arrayForButtonNav.length = 1;
-    menuUl.style.height = "50px";
-    nameBox.style.transform = "translate(0)";
-    menuBox.style.height = "50px";
-}
-function activeNav() {
-    line1.style.transform = "rotate(45deg) translate(16px, -2px)";
-    line2.style.transform = "translateX(64px)";
-    line2.style.opacity = "0";
-    line3.style.transform = "rotate(-45deg) translate(16px, 2px)";
-    menuUl.style.transform = "translateX(0)";
-    menuUl.style.height = "auto";
-    nameBox.style.transform = "translate(-100%)";
-    menuBox.style.height = "auto";
-}
 function checkButtonInService() {
     if (valueArray == 0) {
         upButton.disabled = true;
         downButton.disabled = false;
-    }   
-    else {
+    } else {
         upButton.disabled = false;
-    } 
+    }
     if (valueArray == 4) {
         downButton.disabled = true;
         upButton.disabled = false;
-    }
-    else {
+    } else {
         downButton.disabled = false;
     }
-    
+
     for (let i = 0; i < lis.length; i++) {
-        lis[i].className =  "";
+        lis[i].className = "";
         lis[valueArray].className = "active-li";
     }
 }
-
