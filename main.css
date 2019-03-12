@@ -9,6 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -58,71 +59,92 @@
 
 .icon-cancel:before {
   content: "\e800";
-} /* '' */
+}
+/* '' */
 .icon-ok-circled2:before {
   content: "\e801";
-} /* '' */
+}
+/* '' */
 .icon-right-big:before {
   content: "\e802";
-} /* '' */
+}
+/* '' */
 .icon-gmail:before {
   content: "\e803";
-} /* '' */
+}
+/* '' */
 .icon-phone:before {
   content: "\e804";
-} /* '' */
+}
+/* '' */
 .icon-mail:before {
   content: "\e805";
-} /* '' */
+}
+/* '' */
 .icon-videocam:before {
   content: "\e806";
-} /* '' */
+}
+/* '' */
 .icon-cancel-1:before {
   content: "\e807";
-} /* '' */
+}
+/* '' */
 .icon-cancel-circled:before {
   content: "\e808";
-} /* '' */
+}
+/* '' */
 .icon-cancel-circled2:before {
   content: "\e809";
-} /* '' */
+}
+/* '' */
 .icon-download:before {
   content: "\e80a";
-} /* '' */
+}
+/* '' */
 .icon-down-circled2:before {
   content: "\e80b";
-} /* '' */
+}
+/* '' */
 .icon-download-1:before {
   content: "\e80c";
-} /* '' */
+}
+/* '' */
 .icon-download-alt:before {
   content: "\e80d";
-} /* '' */
+}
+/* '' */
 .icon-phone-squared:before {
   content: "\f098";
-} /* '' */
+}
+/* '' */
 .icon-github-circled:before {
   content: "\f09b";
-} /* '' */
+}
+/* '' */
 .icon-angle-circled-right:before {
   content: "\f138";
-} /* '' */
+}
+/* '' */
 .icon-right-circled2:before {
   content: "\f18e";
-} /* '' */
+}
+/* '' */
 .icon-telegram:before {
   content: "\f2c6";
-} /* '' */
+}
+/* '' */
 .icon-twitter-bird:before {
   content: "\f303";
-} /* '' */
+}
+/* '' */
 .icon-linkedin-squared:before {
   content: "\f30c";
-} /* '' */
+}
+/* '' */
 .icon-linkedin-circled:before {
   content: "\f319";
-} /* '' */
-
+}
+/* '' */
 /*-------fontello-icons-------*/
 .icon-angle-circled-right {
   position: absolute;
@@ -135,6 +157,7 @@ body {
   font-family: "Hind Madurai", "Open sans", "Roboto", Helvetica, Arial;
   margin: 0;
 }
+
 :root {
   --line-height-for-corousel: 60px;
   --font-size-corousel: 1.3em;
@@ -146,15 +169,22 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
 .content {
   margin: 0 auto 30px;
   display: none;
 }
+
+section {
+  min-height: 100vh;
+}
+
+
+/*-------Header-------*/
 header {
   width: 100%;
-  height: calc(100vh - 40px);
+  height: 100vh;
   color: white;
-  margin-top: 40px;
   text-align: center;
   background: radial-gradient(farthest-side at center center, #6c75a8, #373172);
   text-shadow: 2px 2px 3px black;
@@ -164,9 +194,11 @@ header {
   text-transform: uppercase;
   position: relative;
 }
+
 header div {
   z-index: 2;
 }
+
 header img {
   position: absolute;
   left: 0;
@@ -176,42 +208,42 @@ header img {
   z-index: 1;
   filter: opacity(0.4);
 }
+
 header div h1 {
   font-weight: normal;
 }
+
 .font-size-level-1 {
   font-size: 2.6em;
   font-weight: bold;
 }
+
 .font-size-level-2 {
   font-size: 1.8em;
 }
+
 .font-size-level-3 {
   font-size: 0.95em;
 }
+
 body .active {
   display: block;
-}
-section {
-  padding: 20px;
-  min-height: calc(100vh - 80px);
 }
 
 /*-------Navigation-------*/
 nav {
   width: 100%;
   height: 40px;
-  background: #16263f;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   line-height: 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   color: white;
   z-index: 100;
 }
+
 nav ul {
   margin: 0 40px 0 0;
   padding: 0;
@@ -220,16 +252,19 @@ nav ul {
   list-style: none;
   text-transform: lowercase;
 }
+
 nav ul li {
   cursor: pointer;
   margin: 0 20px;
 }
+
 nav ul li a {
   position: relative;
   height: 20px;
   text-decoration: none;
   color: white;
 }
+
 nav ul li a::after {
   content: "";
   display: block;
@@ -241,22 +276,27 @@ nav ul li a::after {
   left: 50%;
   transition: all 0.6s;
 }
+
 nav ul li a:hover::after {
   width: 100%;
   left: 0;
   transition: all 0.3s;
 }
+
 nav ul li a.active-link {
   color: rgb(192, 192, 192);
 }
+
 nav ul li a.active-link::after {
   background: rgb(163, 163, 163);
   width: 100%;
   left: 0;
 }
+
 .logo {
   margin: 0 40px;
 }
+
 nav button {
   width: 40px;
   height: 40px;
@@ -268,6 +308,7 @@ nav button {
   display: none;
   outline: none;
 }
+
 nav button .line {
   width: 100%;
   height: 3px;
@@ -275,12 +316,14 @@ nav button .line {
   display: block;
   margin: 5px 0;
 }
+
 nav .drawer {
   display: none;
   transform: translateX(-100%);
   transition: transform 0.6s;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
 nav .back-drop {
   display: none;
   position: fixed;
@@ -303,52 +346,65 @@ input {
   height: 40px;
   margin: 5px 0 20px;
 }
+
 input:focus {
   outline: none;
   border-bottom: 3px solid #7a7a7a;
   opacity: 1;
 }
+
 label {
   visibility: hidden;
 }
+
 .mistake input {
   border-color: #e4442a;
 }
+
 .good input {
   border-color: green;
 }
+
 .visible label {
   visibility: visible;
 }
+
 .hidden label {
   visibility: hidden;
 }
+
 .mail:invalid {
   border-bottom: 3px solid #ff7a65;
 }
+
 .mail:valid {
   border-bottom: 3px solid #07d800;
 }
+
 form {
   display: flex;
   flex-flow: wrap;
 }
+
 form p {
   text-align: center;
   width: 100%;
   text-align: center;
   margin: 20px 0 0;
 }
+
 .column-6 {
   width: calc(50% - 20px);
   margin: 0 10px;
 }
+
 .link-box {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
 }
+
 .link-box a {
   width: 60px;
   height: 64px;
@@ -357,19 +413,23 @@ form p {
   overflow: hidden;
   border-radius: 100%;
 }
+
 .link-box img {
   width: 100%;
   height: 64px;
 }
+
 .link-box p {
   text-align: center;
   width: 100%;
   text-align: center;
   margin: 20px 0;
 }
+
 .link-box a:hover {
   transform: scale(1.2, 1.2);
 }
+
 form textarea {
   width: 80%;
   margin: 20px 10%;
@@ -379,6 +439,7 @@ form textarea {
   border: 2px solid silver;
   padding: 10px;
 }
+
 form button {
   width: 80px;
   margin: 6px auto;
@@ -388,6 +449,7 @@ form button {
   background: transparent;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.424);
 }
+
 form button:active {
   border: 1px solid gray;
   margin: 7px auto;
@@ -400,20 +462,23 @@ form button:active {
   transform-style: preserve-3d;
   perspective: 800px;
 }
-.example .corousel {
+
+.example .carousel {
   width: 100%;
   margin: 0 auto;
   transform: rotateX(30deg) scale(1.2, 1.2);
   background: #c4dfff81;
   padding: 0;
 }
-.example .corousel .box-services {
+
+.example .carousel .box-services {
   height: 180px;
   margin: 0;
   position: relative;
   overflow: hidden;
 }
-.example .corousel .box-services div {
+
+.example .carousel .box-services div {
   position: absolute;
   top: 60px;
   border: 3px solid teal;
@@ -421,6 +486,7 @@ form button:active {
   width: 100%;
   text-align: center;
 }
+
 .example .box-services ul {
   height: 60px;
   list-style: none;
@@ -429,6 +495,7 @@ form button:active {
   transition: all 1.2s;
   box-sizing: border-box;
 }
+
 .example .box-services ul li {
   display: block;
   height: inherit;
@@ -437,11 +504,13 @@ form button:active {
   font-size: 0.8em;
   transition: all 1.2s;
 }
-.example .corousel .box-services .active-li {
+
+.example .carousel .box-services .active-li {
   font-size: var(--font-size-corousel);
   opacity: 1;
 }
-.example .corousel button {
+
+.example .carousel button {
   width: 100%;
   height: 30px;
   padding: 0;
@@ -452,12 +521,14 @@ form button:active {
   border: 0;
   transform: scaleX(1.02);
 }
-.example .corousel button:active {
+
+.example .carousel button:active {
   transform: translateY(4px);
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
   transform: scaleX(1) translateY(3px);
 }
-.example .corousel button:disabled {
+
+.example .carousel button:disabled {
   background: rgba(178, 182, 200, 0.657);
 }
 
@@ -470,6 +541,7 @@ form button:active {
     --line-height-for-corousel: 30px;
   }
 }
+
 @media (max-width: 700px) {
   :root {
     --width: 80%;
@@ -477,37 +549,45 @@ form button:active {
     --line-height-for-corousel: 35px;
   }
 }
+
 @media (max-width: 935px) {
   :root {
     --width-corousel: 85%;
     --font-size-corousel: 1em;
   }
 }
+
 @media (max-width: 1090px) {
   :root {
     --width-corousel: 50%;
   }
 }
+
 @media (max-width: 600px) {
   header div {
     font-size: 0.6em;
   }
 }
+
 @media (min-width: 600px) and (max-width: 800px) {
   header div {
     font-size: 0.8em;
   }
 }
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
   }
+
   nav {
     justify-content: center;
   }
+
   nav button {
     display: block;
   }
+
   nav .drawer {
     display: block;
     width: 160px;
@@ -521,6 +601,7 @@ form button:active {
     align-items: center;
     z-index: 11;
   }
+
   nav .drawer ul {
     width: 140px;
     display: flex;
