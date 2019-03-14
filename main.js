@@ -128,8 +128,8 @@ navLinks.className = "";
 
 navLinks.forEach(function(navLink) {
   //active home page in begin
-  document.getElementById(activeLink.href.split("#").pop()).className =
-    "active content";
+  document.getElementById(activeLink.href.split("#").pop()).className = "active content";
+
   navLink.addEventListener("click", function(event) {
     // Deactivate current page
     activeLink.className = "";
@@ -177,7 +177,7 @@ body.addEventListener("mousewheel", function(event) {
     nav.style.cssText = "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .4s linear;";
     console.log(nav.getBoundingClientRect());
   }
-  if (positionNav.bottom < 0) {
+  if (positionNav.bottom <= 0) {
     nav.style.cssText = "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .1s linear;";
     console.log(nav.getBoundingClientRect());
   }
