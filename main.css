@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif,"Hind Madurai", "Open sans", "Roboto", Helvetica, Arial;
+  font-family: sans-serif, "Hind Madurai", "Open sans", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial;
   margin: 0;
 }
 
@@ -21,11 +21,46 @@ body {
 
 section {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
+.cart {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
 
-
-
+.cart div {
+  width: 340px;
+  height: 400px;
+  min-width: 200px;
+  margin: 20px;
+}
+.cart div h2 {
+  border-bottom: 2px solid gray;
+  color: rgb(53, 53, 53);
+  margin-bottom: 10px;
+}
+.cart div p {
+  margin-top: 0;
+}
+.box {
+  border: 2px solid gray;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  width: 100%;
+  height: 200px;
+  background: rgb(1, 10, 26);
+}
 
 /*-------Header-------*/
 header {
@@ -33,7 +68,12 @@ header {
   height: 100vh;
   color: white;
   text-align: center;
-  background: radial-gradient(circle at center center, #3b4da0, #04034b, #000000);
+  background: radial-gradient(
+    circle at center center,
+    #3b4da0,
+    #04034b,
+    #000000
+  );
   text-shadow: 2px 2px 3px black;
   display: flex;
   justify-content: center;
@@ -53,7 +93,7 @@ header img {
   width: 100%;
   height: inherit;
   z-index: 1;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 header div h1 {
