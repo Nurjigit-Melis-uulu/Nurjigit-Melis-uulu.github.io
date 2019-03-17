@@ -39,10 +39,10 @@ footer {
 
 footer .footer-logo {
   position: absolute;
-  top: calc(50% - 20px);
+  top: calc(50% - 30px);
   left: calc(50% - 20px);
   width: 40px;
-  height: 40px;
+  height: 60px;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
@@ -496,73 +496,4 @@ form button:active {
     display: flex;
     flex-flow: column;
   }
-}
-
-.post {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  margin: 10px;
-}
-.post img {
-  width: inherit;
-  height: inherit;
-  transition: all 1s;
-}
-.post .clip {
-  width: 340px;
-  height: 340px;
-  transform: rotateZ(45deg);
-  position: absolute;
-  transition: all 0.7s ease-out;
-  opacity: 0.6;
-}
-.red {
-  background: chocolate;
-  top: -20px;
-  left: -420px;
-}
-.blue {
-  background: indigo;
-  top: -20px;
-  right: -420px;
-}
-.post:hover img {
-  transform: scale(1.2, 1.2) rotateZ(10deg);
-}
-.post:hover img {
-  filter: blur(4px);
-}
-.post:hover .red {
-  left: -10px;
-}
-.post:hover .blue {
-  right: -10px;
-}
-.post:hover .text {
-  opacity: 1;
-  transition: all 0.6s 0.6s;
-}
-.text {
-  position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 75px);
-  width: 190px;
-  height: 260px;
-  opacity: 0;
-  transition: all 0.1s;
-  color: white;
-}
-.post button {
-  width: 100px;
-  margin: 5px 0;
-  border: 2px solid rgb(200, 156, 9);
-  border-radius: 4px;
-  background: rgba(255, 255, 0, 0.2);
-  color: white;
-}
-.post button:hover {
-  background: rgba(255, 255, 0, 0.5);
 }
