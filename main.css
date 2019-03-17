@@ -32,6 +32,31 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer .footer-logo {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+footer .footer-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+footer div small {
+  display: flex;
+  width: 300px;
+  justify-content: center;
 }
 
 /*-------Header-------*/
