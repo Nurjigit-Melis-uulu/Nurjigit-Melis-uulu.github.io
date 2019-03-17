@@ -144,6 +144,8 @@ navLinks.forEach(function(navLink) {
     document.getElementById(activeLink.href.split("#").pop()).className =
       "active content";
 
+    windowZero();
+
     event.preventDefault();
   });
 });
@@ -160,6 +162,8 @@ linkInFooter.addEventListener("click", function(event) {
   // Activate new page
   document.getElementById(activeLink.href.split("#").pop()).className =
     "active content";
+  
+  windowZero();
 
   event.preventDefault();
 })
@@ -183,18 +187,21 @@ function checkButtonInService() {
     lis[valueArray].className = "active-li";
   }
 }
-body.addEventListener("mousewheel", function(event) {
+window.addEventListener('scroll', function(event) {
   let nav = document.querySelector("nav");
 
   let positionNav = nav.getBoundingClientRect();
   let positionDoc = body.getBoundingClientRect();
 
   if (positionNav.top == positionDoc.top) {
-    nav.style.cssText = "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .4s linear;";
+    nav.style.cssText = "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
     console.log(nav.getBoundingClientRect());
   }
-  if (positionNav.bottom <= 0) {
-    nav.style.cssText = "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .1s linear;";
+  if (positionNav.top < 0) {
+    nav.style.cssText = "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
     console.log(nav.getBoundingClientRect());
   }
 });
+function windowZero() {
+  window.getBoundingClientRect().top = 0;
+}

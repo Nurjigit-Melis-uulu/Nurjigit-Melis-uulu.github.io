@@ -59,6 +59,10 @@ footer div small {
   justify-content: center;
 }
 
+footer a {
+  color: white;
+}
+
 /*-------Header-------*/
 header {
   width: 100%;
