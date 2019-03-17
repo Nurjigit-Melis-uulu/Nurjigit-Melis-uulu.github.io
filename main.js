@@ -3,7 +3,6 @@ const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
 let menuUl = document.querySelector("#show-menu");
 let menuBox = document.querySelector(".menu-box");
-let optionsPageBox = document.querySelector(".options");
 let inputFocus = document.querySelectorAll("input");
 let label = document.querySelectorAll("label");
 let email = document.querySelector(".email");
@@ -20,6 +19,7 @@ let drawer = document.querySelector("nav .drawer");
 let boll = false;
 let backDrop = document.querySelector(".back-drop");
 let body = document.querySelector('body');
+let linkInFooter = document.querySelector('footer a');
 
 backDrop.addEventListener("click", function() {
   drawer.style.transform = "translate(-100%)";
@@ -147,6 +147,22 @@ navLinks.forEach(function(navLink) {
     event.preventDefault();
   });
 });
+
+linkInFooter.addEventListener("click", function(event) {
+  // Deactivate current page
+  for (let i = 0; i < content.length; i++) {
+    content[i].className = 'content';
+  }
+
+  // Set new page
+  activeLink = this;
+
+  // Activate new page
+  document.getElementById(activeLink.href.split("#").pop()).className =
+    "active content";
+
+  event.preventDefault();
+})
 
 function checkButtonInService() {
   if (valueArray == 0) {
