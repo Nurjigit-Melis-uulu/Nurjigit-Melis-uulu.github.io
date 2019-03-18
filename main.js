@@ -18,8 +18,8 @@ let valueArray = 0;
 let drawer = document.querySelector("nav .drawer");
 let boll = false;
 let backDrop = document.querySelector(".back-drop");
-let body = document.querySelector('body');
-let linkInFooter = document.querySelector('footer a');
+let body = document.querySelector("body");
+let linkInFooter = document.querySelector("footer a");
 
 backDrop.addEventListener("click", function() {
   drawer.style.transform = "translate(-100%)";
@@ -128,7 +128,8 @@ navLinks.className = "";
 
 navLinks.forEach(function(navLink) {
   //active home page in begin
-  document.getElementById(activeLink.href.split("#").pop()).className = "active content";
+  document.getElementById(activeLink.href.split("#").pop()).className =
+    "active content";
 
   navLink.addEventListener("click", function(event) {
     // Deactivate current page
@@ -153,7 +154,7 @@ navLinks.forEach(function(navLink) {
 linkInFooter.addEventListener("click", function(event) {
   // Deactivate current page
   for (let i = 0; i < content.length; i++) {
-    content[i].className = 'content';
+    content[i].className = "content";
   }
 
   // Set new page
@@ -162,11 +163,11 @@ linkInFooter.addEventListener("click", function(event) {
   // Activate new page
   document.getElementById(activeLink.href.split("#").pop()).className =
     "active content";
-  
+
   windowZero();
 
   event.preventDefault();
-})
+});
 
 function checkButtonInService() {
   if (valueArray == 0) {
@@ -187,18 +188,20 @@ function checkButtonInService() {
     lis[valueArray].className = "active-li";
   }
 }
-window.addEventListener('scroll', function(event) {
+window.addEventListener("scroll", function(event) {
   let nav = document.querySelector("nav");
 
   let positionNav = nav.getBoundingClientRect();
   let positionDoc = body.getBoundingClientRect();
 
   if (positionNav.top == positionDoc.top) {
-    nav.style.cssText = "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
+    nav.style.cssText =
+      "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
     console.log(nav.getBoundingClientRect());
   }
   if (positionNav.top < 0) {
-    nav.style.cssText = "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
+    nav.style.cssText =
+      "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
     console.log(nav.getBoundingClientRect());
   }
 });
