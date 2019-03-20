@@ -169,6 +169,28 @@ linkInFooter.addEventListener("click", function(event) {
   event.preventDefault();
 });
 
+window.addEventListener("scroll", function(event) {
+  let nav = document.querySelector("nav");
+
+  let positionNav = nav.getBoundingClientRect();
+  let positionDoc = body.getBoundingClientRect();
+
+  if (positionNav.top == positionDoc.top) {
+    nav.style.cssText =
+      "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
+    console.log(nav.getBoundingClientRect());
+  }
+  if (positionNav.top < 0) {
+    nav.style.cssText =
+      "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
+    console.log(nav.getBoundingClientRect());
+  }
+});
+
+function windowZero() {
+  window.getBoundingClientRect().top = 0;
+}
+
 function checkButtonInService() {
   if (valueArray == 0) {
     upButton.disabled = true;
@@ -187,24 +209,4 @@ function checkButtonInService() {
     lis[i].className = "";
     lis[valueArray].className = "active-li";
   }
-}
-window.addEventListener("scroll", function(event) {
-  let nav = document.querySelector("nav");
-
-  let positionNav = nav.getBoundingClientRect();
-  let positionDoc = body.getBoundingClientRect();
-
-  if (positionNav.top == positionDoc.top) {
-    nav.style.cssText =
-      "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
-    console.log(nav.getBoundingClientRect());
-  }
-  if (positionNav.top < 0) {
-    nav.style.cssText =
-      "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
-    console.log(nav.getBoundingClientRect());
-  }
-});
-function windowZero() {
-  window.getBoundingClientRect().top = 0;
 }
