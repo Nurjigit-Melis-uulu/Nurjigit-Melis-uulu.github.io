@@ -84,7 +84,75 @@
         </header>
 
         <section>
-          <article></article>
+          <p class="font-size-level-2">About me</p>
+          <article>
+            <div class="text-box">
+              <h3>Who I'm</h3>
+              <span id="typed-string"></span>
+              <br />
+              <br />
+              I working in web development. If you have a project that needs
+              some creative injection then that’s where I come in!
+              <br />
+              <br />
+              My job is to build your website so that it is functional and
+              user-friendly but at the same time attractive. Moreover, I add
+              personal touch to your product and make sure that is eye-catching
+              and easy to use. My aim is to bring across your message and
+              identity in the most creative way.
+            </div>
+            <div class="text-box">
+              <h3>Expert in</h3>
+              <div class="skill-chart-box">
+                <div>
+                  <span>
+                    JavaScripts:
+                  </span>
+                  <div class="line-skill">
+                    <div class="line">
+                      <div data-value="56%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-chart-box">
+                <div>
+                  <span>
+                    React:
+                  </span>
+                  <div class="line-skill">
+                    <div class="line">
+                      <div data-value="52%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-chart-box">
+                <div>
+                  <span>
+                    HTML:
+                  </span>
+                  <div class="line-skill">
+                    <div class="line">
+                      <div data-value="73%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-chart-box">
+                <div>
+                  <span>
+                    CSS:
+                  </span>
+                  <div class="line-skill">
+                    <div class="line">
+                      <div data-value="80%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </section>
       </div>
 
@@ -101,66 +169,30 @@
         </header>
 
         <section>
+          <p class="font-size-level-2">My services</p>
           <article>
-            <p>
-              <big>I give the best service for you!</big>
-
-              <br />
-              <br />
-
-              I offer professional Front-end services along with custom
-              development and customization. E-commerce or presentation website.
-            </p>
-            I offer the following services:
-
-            <div class="example">
-              <div class="carousel">
-                <div class="box-services">
-                  <div>
-                    <ul>
-                      <li class="active-li">
-                        Front-end development
-                      </li>
-                      <li>
-                        Beautiful design
-                      </li>
-                      <li>
-                        Css animations
-                      </li>
-                      <li>
-                        Full website leyout
-                      </li>
-                      <li>
-                        JavaScripts React.js
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <button id="up">Up</button>
-
-                <button id="down">Down</button>
-              </div>
+            <div class="text-box">
+              <p>
+                I offer professional Front-end services along with custom
+                development and customization. E-commerce or presentation website.
+                <br />
+                <br />
+                I am the first time in this area, but I provide a full cycle of
+                development including analysis, research, design, programming,
+                testing.
+                <br />
+                <br />
+                I like to approach projects with the mindset to focus on the
+                solution that delivers fast, cost-effective results without
+                compromising on code quality
+                <br />
+                <br />
+                In the end, (client satisfaction, privacy, & confidentiality)
+                contribution to my clients’ success, is the biggest win.
+              </p>
             </div>
-
-            <p>
-              I am the first time in this area, but I provide a full cycle of
-              development including analysis, research, design, programming,
-              testing.
-
-              <br />
-              <br />
-
-              I like to approach projects with the mindset to focus on the
-              solution that delivers fast, cost-effective results without
-              compromising on code quality.
-
-              <br />
-              <br />
-
-              In the end, (client satisfaction, privacy, & confidentiality)
-              contribution to my clients’ success, is the biggest win.
-            </p>
+            <div class="text-box">
+            </div>
           </article>
         </section>
       </div>
@@ -317,6 +349,20 @@
       </footer>
     </div>
 
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/typed.min.js"></script>
+    <script>
+      var typed = new Typed("#typed-string", {
+        strings: [
+          "My name is <strong>Nurjigit</strong>^3000",
+          "I am <strong>Front-end developer</strong>^3000"
+        ],
+        typeSpeed: 0,
+        backSpeed: 0,
+        fadeOut: true,
+        loop: true
+      });
+    </script>
   </body>
 </html>

@@ -91,33 +91,6 @@ for (let i = 0; i < links.length; i++) {
     });
 }
 */
-const lis = ulInService.children;
-
-upButton.addEventListener("click", function() {
-  translateY += 60;
-  valueArray -= 1;
-
-  ulInService.style.transform = "translateY(" + translateY + "px)";
-
-  checkButtonInService();
-});
-downButton.addEventListener("click", function() {
-  translateY -= 60;
-  valueArray += 1;
-
-  ulInService.style.transform = "translateY(" + translateY + "px)";
-
-  checkButtonInService();
-});
-
-if (valueArray == 0) {
-  upButton.disabled = true;
-  downButton.disabled = false;
-}
-if (valueArray == 4) {
-  downButton.disabled = true;
-  upButton.disabled = false;
-}
 
 const navLinks = document.querySelectorAll("nav a");
 const content = document.querySelectorAll(".content");
@@ -209,4 +182,17 @@ function checkButtonInService() {
     lis[i].className = "";
     lis[valueArray].className = "active-li";
   }
+}
+
+let lineSkill = document.querySelectorAll("div.line");
+let skillsValue = document.querySelectorAll(".line div");
+
+for (let i = 0; i < skillsValue.length; i++) {
+  let valueSkills = skillsValue[i].getAttribute("data-value");
+
+  skillsValue[i].append(valueSkills);
+}
+
+for (let i = 0; i < lineSkill.length; i++) {
+  lineSkill[i].style.width = lineSkill[i].firstElementChild.getAttribute('data-value');
 }
