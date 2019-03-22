@@ -1,4 +1,6 @@
 const menuButton = document.querySelector("#menu-button");
+const navLinks = document.querySelectorAll("nav a");
+const content = document.querySelectorAll(".content");
 const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
 let menuUl = document.querySelector("#show-menu");
@@ -8,8 +10,6 @@ let label = document.querySelectorAll("label");
 let email = document.querySelector(".email");
 let containerAllPages = document.querySelector(".container");
 let submitButton = document.querySelector("#submit");
-let ulInService = document.querySelector(".box-services ul");
-let corouselInService = document.querySelector(".carousel");
 let downButton = document.querySelector("#down");
 let upButton = document.querySelector("#up");
 let translateYForcorouselInService = 0;
@@ -20,6 +20,8 @@ let boll = false;
 let backDrop = document.querySelector(".back-drop");
 let body = document.querySelector("body");
 let linkInFooter = document.querySelector("footer a");
+let lineSkill = document.querySelectorAll("div.line");
+let skillsValue = document.querySelectorAll(".line div");
 
 backDrop.addEventListener("click", function () {
   drawer.style.transform = "translate(-100%)";
@@ -92,9 +94,6 @@ for (let i = 0; i < links.length; i++) {
 }
 */
 
-const navLinks = document.querySelectorAll("nav a");
-const content = document.querySelectorAll(".content");
-
 let activeLink = navLinks[0]; // Home
 
 navLinks.className = "";
@@ -155,7 +154,7 @@ window.addEventListener("scroll", function (event) {
   }
   if (positionNav.top < 0) {
     nav.style.cssText =
-      "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .4s linear;";
+      "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .3s linear;";
     console.log(nav.getBoundingClientRect());
   }
 });
@@ -184,9 +183,6 @@ function checkButtonInService() {
   }
 }
 
-let lineSkill = document.querySelectorAll("div.line");
-let skillsValue = document.querySelectorAll(".line div");
-
 for (let i = 0; i < skillsValue.length; i++) {
   let valueSkills = skillsValue[i].getAttribute("data-value");
 
@@ -195,4 +191,15 @@ for (let i = 0; i < skillsValue.length; i++) {
 
 for (let i = 0; i < lineSkill.length; i++) {
   lineSkill[i].style.width = lineSkill[i].firstElementChild.getAttribute('data-value');
+}
+
+let carouselButton = document.querySelectorAll('.carousel-option button');
+
+for (let i = 0; i < carouselButton.length; i++) {
+  carouselButton[i].addEventListener('click', () => {
+    for (let i = 0; i < carouselButton.length; i++) {
+      carouselButton[i].className = "";      
+    }
+    carouselButton[i].className = "active";;
+  })
 }

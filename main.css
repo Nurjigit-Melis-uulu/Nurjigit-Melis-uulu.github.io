@@ -530,7 +530,7 @@ article .text-box {
   border: 2px solid gray;
   background: white;
   outline: none;
-  transition: opacity, width, height, background .6s;
+  transition: all .4s;
 }
 
 .carousel-option button.active {
@@ -538,4 +538,5 @@ article .text-box {
   height: 15px;
   background: silver;
   opacity: .8;
+  margin: 0 15px;
 }
