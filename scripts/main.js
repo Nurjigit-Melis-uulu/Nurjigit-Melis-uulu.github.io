@@ -21,12 +21,12 @@ let backDrop = document.querySelector(".back-drop");
 let body = document.querySelector("body");
 let linkInFooter = document.querySelector("footer a");
 
-backDrop.addEventListener("click", function() {
+backDrop.addEventListener("click", function () {
   drawer.style.transform = "translate(-100%)";
   backDrop.style.display = "none";
 });
 
-menuButton.addEventListener("click", function() {
+menuButton.addEventListener("click", function () {
   boll = !boll;
 
   if (boll) {
@@ -37,14 +37,14 @@ menuButton.addEventListener("click", function() {
   }
 });
 
-email.addEventListener("change", function() {
+email.addEventListener("change", function () {
   email.className = "mail";
 });
 
 for (var i = 0; i < inputFocus.length; i++) {
   let parentInput = inputFocus[i].parentElement;
 
-  inputFocus[i].addEventListener("input", function() {
+  inputFocus[i].addEventListener("input", function () {
     if (this.value.length > 0) {
       parentInput.classList.add("visible");
       parentInput.classList.remove("hidden");
@@ -53,7 +53,7 @@ for (var i = 0; i < inputFocus.length; i++) {
       parentInput.classList.remove("visible");
     }
   });
-  inputFocus[i].addEventListener("change", function() {
+  inputFocus[i].addEventListener("change", function () {
     if (this.value.length > 0) {
       parentInput.classList.add("good");
       parentInput.classList.remove("hidden");
@@ -99,12 +99,12 @@ let activeLink = navLinks[0]; // Home
 
 navLinks.className = "";
 
-navLinks.forEach(function(navLink) {
+navLinks.forEach(function (navLink) {
   //active home page in begin
   document.getElementById(activeLink.href.split("#").pop()).className =
     "active content";
 
-  navLink.addEventListener("click", function(event) {
+  navLink.addEventListener("click", function (event) {
     // Deactivate current page
     activeLink.className = "";
     document.getElementById(activeLink.href.split("#").pop()).className =
@@ -124,7 +124,7 @@ navLinks.forEach(function(navLink) {
   });
 });
 
-linkInFooter.addEventListener("click", function(event) {
+linkInFooter.addEventListener("click", function (event) {
   // Deactivate current page
   for (let i = 0; i < content.length; i++) {
     content[i].className = "content";
@@ -142,7 +142,7 @@ linkInFooter.addEventListener("click", function(event) {
   event.preventDefault();
 });
 
-window.addEventListener("scroll", function(event) {
+window.addEventListener("scroll", function (event) {
   let nav = document.querySelector("nav");
 
   let positionNav = nav.getBoundingClientRect();

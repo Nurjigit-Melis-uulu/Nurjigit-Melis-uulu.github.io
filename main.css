@@ -22,7 +22,8 @@ body {
 }
 
 section {
-  min-height: 70vh;
+  padding-top: 20px;
+  min-height: 100vh;
 }
 
 footer {
@@ -434,7 +435,7 @@ article {
   margin: 0 auto;
 }
 
-article .text-box { 
+article .text-box {
   width: 100%;
   padding: 0 40px;
   box-sizing: border-box;
@@ -489,4 +490,52 @@ article .text-box {
 
 .typed-cursor {
   display: none;
+}
+
+.carousel {
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 6px silver;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-content {
+  width: 100%;
+  height: 300px;
+}
+
+.carousel-content img {
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-option {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-option button {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 10px;
+  border: 2px solid gray;
+  background: white;
+  outline: none;
+  transition: opacity, width, height, background .6s;
+}
+
+.carousel-option button.active {
+  width: 15px;
+  height: 15px;
+  background: silver;
+  opacity: .8;
 }
