@@ -22,8 +22,9 @@ body {
 }
 
 section {
-  padding-top: 20px;
-  min-height: 100vh;
+  padding: 40px 0 100px;
+  min-height: 90vh;
+  box-sizing: border-box;
 }
 
 footer {
@@ -539,4 +540,20 @@ article .text-box {
   background: silver;
   opacity: .8;
   margin: 0 15px;
+}
+
+.portfolio-box {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.work {
+  width: 30%;
+  min-width: 280px;
+  height: 300px;
+  box-shadow: 1px 1px 6px silver;
+  border-radius: 2px;
+  margin: 5px;
 }

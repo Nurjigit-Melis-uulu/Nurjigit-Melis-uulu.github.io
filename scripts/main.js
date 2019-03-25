@@ -150,12 +150,10 @@ window.addEventListener("scroll", function (event) {
   if (positionNav.top == positionDoc.top) {
     nav.style.cssText =
       "position: absolute; top: 0; left: 0; box-shadow: none; background: transparent; transition: all .6s linear;";
-    console.log(nav.getBoundingClientRect());
   }
   if (positionNav.top < 0) {
     nav.style.cssText =
       "position: fixed; top: 0; left: 0; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); background: #16263f; transition: all .3s linear;";
-    console.log(nav.getBoundingClientRect());
   }
 });
 
