@@ -557,3 +557,17 @@ article .text-box {
   border-radius: 2px;
   margin: 5px;
 }
+
+.download-link {
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 8px 0;
+  background: #3C3C3C;
+  color: white;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  opacity: .8;
+}
