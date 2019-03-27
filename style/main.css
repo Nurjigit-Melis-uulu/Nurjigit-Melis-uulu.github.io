@@ -410,6 +410,10 @@ form button:active {
 }
 
 @media (max-width: 768px) {
+  #servicePage article div.text-box {
+    width: 100%;
+    padding: 0 10px;
+  }
   nav ul {
     display: none;
   }
