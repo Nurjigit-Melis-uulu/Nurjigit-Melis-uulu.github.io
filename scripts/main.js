@@ -117,7 +117,7 @@ navLinks.forEach(function (navLink) {
     document.getElementById(activeLink.href.split("#").pop()).className =
       "active content";
 
-    windowZero();
+    // windowZero();
 
     event.preventDefault();
   });
@@ -136,7 +136,7 @@ linkInFooter.addEventListener("click", function (event) {
   document.getElementById(activeLink.href.split("#").pop()).className =
     "active content";
 
-  windowZero();
+  // windowZero();
 
   event.preventDefault();
 });
@@ -157,9 +157,9 @@ window.addEventListener("scroll", function (event) {
   }
 });
 
-function windowZero() {
-  window.getBoundingClientRect().top = 0;
-}
+// function windowZero() {
+//   window.getBoundingClientRect().top = 0;
+// }
 
 function checkButtonInService() {
   if (valueArray == 0) {
@@ -191,13 +191,23 @@ for (let i = 0; i < lineSkill.length; i++) {
   lineSkill[i].style.width = lineSkill[i].firstElementChild.getAttribute('data-value');
 }
 
-let carouselButton = document.querySelectorAll('.carousel-option button');
+const carouselButton = document.querySelectorAll('.slide-pos div');
+const carouselContent = document.querySelectorAll('.carousel-content div');
 
 for (let i = 0; i < carouselButton.length; i++) {
   carouselButton[i].addEventListener('click', () => {
     for (let i = 0; i < carouselButton.length; i++) {
-      carouselButton[i].className = "";      
+      carouselButton[i].className = "";
     }
-    carouselButton[i].className = "active";;
-  })
-}
+
+    carouselButton[i].className = "active";
+
+    let elementNumber = [i];
+
+    for (let i = 0; i < carouselContent.length; i++) {
+      carouselContent[i].className = "";
+
+      carouselContent[elementNumber].className = "active";
+    }
+  });
+};

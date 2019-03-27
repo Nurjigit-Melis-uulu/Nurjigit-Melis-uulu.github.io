@@ -609,7 +609,7 @@ article .text-box {
 #servicePage .service-box .service-content {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.589);
+  background: rgba(0, 0, 0, .8);
   text-align: center;
   box-sizing: border-box;
   padding: 10px;
@@ -619,14 +619,14 @@ article .text-box {
 #servicePage .service-box .service-content .carousel {
   width: 100%;
   height: 240px;
-  overflow: hidden;
   position: relative;
 }
 
 .carousel-content {
-  width: 500%;
+  width: 100%;
   height: inherit;
   display: flex;
+  position: relative;
 }
 
 .carousel-content div {
@@ -637,6 +637,15 @@ article .text-box {
   justify-content: center;
   display: flex;
   flex-flow: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.carousel-content div.active {
+  opacity: 1;
 }
 
 .carousel-content div p {
