@@ -52,12 +52,6 @@ body {
   color: rgb(60, 60, 60);
 }
 
-:root {
-  --line-height-for-corousel: 60px;
-  --font-size-corousel: 1.3em;
-  --width-corousel: 40%;
-}
-
 .container {
   width: 100%;
   box-sizing: border-box;
@@ -395,37 +389,11 @@ form button:active {
   border: 1px solid gray;
   margin: 7px auto;
 }
-/*-------@media-------*/
-@media (max-width: 500px) {
-  :root {
-    --widht-for-text: 0px;
-    --auto-margin: auto;
-    --width-corousel: 100%;
-    --line-height-for-corousel: 30px;
-  }
-}
 
+/*-------@media-------*/
 @media (max-width: 700px) {
-  :root {
-    --width: 80%;
-    --width-corousel: 100%;
-    --line-height-for-corousel: 35px;
-  }
   article {
     flex-flow: column;
-  }
-}
-
-@media (max-width: 935px) {
-  :root {
-    --width-corousel: 85%;
-    --font-size-corousel: 1em;
-  }
-}
-
-@media (max-width: 1090px) {
-  :root {
-    --width-corousel: 50%;
   }
 }
 
@@ -609,7 +577,7 @@ article .text-box {
 #servicePage .service-box .service-content {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.8);
   text-align: center;
   box-sizing: border-box;
   padding: 10px;
@@ -677,7 +645,7 @@ article .text-box {
 
 .slide-pos div.active {
   border: 2px solid yellow;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .slide-pos div.active:hover {
