@@ -117,7 +117,7 @@ navLinks.forEach(function (navLink) {
     document.getElementById(activeLink.href.split("#").pop()).className =
       "active content";
 
-    // windowZero();
+    windowZero();
 
     event.preventDefault();
   });
@@ -136,7 +136,7 @@ linkInFooter.addEventListener("click", function (event) {
   document.getElementById(activeLink.href.split("#").pop()).className =
     "active content";
 
-  // windowZero();
+  windowZero();
 
   event.preventDefault();
 });
@@ -157,9 +157,9 @@ window.addEventListener("scroll", function (event) {
   }
 });
 
-// function windowZero() {
-//   window.getBoundingClientRect().top = 0;
-// }
+function windowZero() {
+  window.getBoundingClientRect().top = 0;
+}
 
 function checkButtonInService() {
   if (valueArray == 0) {
