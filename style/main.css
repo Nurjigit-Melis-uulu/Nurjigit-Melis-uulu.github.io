@@ -414,6 +414,10 @@ form button:active {
     width: 100%;
     padding: 0 10px;
   }
+  article div.text-box {
+    width: 100%;
+    padding: 0 10px;
+  }
   nav ul {
     display: none;
   }
