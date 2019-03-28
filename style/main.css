@@ -111,12 +111,10 @@ header {
   height: 100vh;
   color: white;
   text-align: center;
-  background: radial-gradient(
-    circle at center center,
+  background: radial-gradient(circle at center center,
     #3b4da0,
     #04034b,
-    #000000
-  );
+    #000000);
   text-shadow: 2px 2px 3px black;
   display: flex;
   justify-content: center;
@@ -270,126 +268,6 @@ nav .back-drop {
   z-index: 10;
 }
 
-/*-------Form-in-contact-page-------*/
-input {
-  color: #a1a1a1;
-  padding-left: 5px;
-  width: 100%;
-  border: 0;
-  border-bottom: 3px solid #acacac;
-  border-radius: 10px;
-  height: 40px;
-  margin: 5px 0 20px;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: 3px solid #7a7a7a;
-  opacity: 1;
-}
-
-label {
-  visibility: hidden;
-}
-
-.mistake input {
-  border-color: #e4442a;
-}
-
-.good input {
-  border-color: green;
-}
-
-.visible label {
-  visibility: visible;
-}
-
-.hidden label {
-  visibility: hidden;
-}
-
-.mail:invalid {
-  border-bottom: 3px solid #ff7a65;
-}
-
-.mail:valid {
-  border-bottom: 3px solid #07d800;
-}
-
-form {
-  display: flex;
-  flex-flow: wrap;
-}
-
-form p {
-  text-align: center;
-  width: 100%;
-  text-align: center;
-  margin: 20px 0 0;
-}
-
-.column-6 {
-  width: calc(50% - 20px);
-  margin: 0 10px;
-}
-
-.link-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-
-.link-box a {
-  width: 60px;
-  height: 64px;
-  margin: 0 10px;
-  display: block;
-  overflow: hidden;
-  border-radius: 100%;
-}
-
-.link-box img {
-  width: 100%;
-  height: 64px;
-}
-
-.link-box p {
-  text-align: center;
-  width: 100%;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.link-box a:hover {
-  transform: scale(1.2, 1.2);
-}
-
-form textarea {
-  width: 80%;
-  margin: 20px 10%;
-  height: 100px;
-  resize: none;
-  border-radius: 20px;
-  border: 2px solid silver;
-  padding: 10px;
-}
-
-form button {
-  width: 80px;
-  margin: 6px auto;
-  border: 0;
-  border-bottom: 3px solid gray;
-  border-radius: 10px;
-  background: transparent;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.424);
-}
-
-form button:active {
-  border: 1px solid gray;
-  margin: 7px auto;
-}
-
 /*-------@media-------*/
 @media (max-width: 700px) {
   article {
@@ -414,10 +292,12 @@ form button:active {
     width: 100%;
     padding: 0 10px;
   }
+
   article div.text-box {
     width: 100%;
     padding: 0 10px;
   }
+
   nav ul {
     display: none;
   }
@@ -539,6 +419,7 @@ article .text-box {
   background: #3c3c3c;
   color: white;
   text-decoration: none;
+  margin: 0 10px 10px 0;
 }
 
 .download-link:hover {
@@ -572,7 +453,7 @@ article .text-box {
 
 #servicePage .service-box {
   width: 100%;
-  height: 420px;
+  min-height: 420px;
   background: black;
   background: url(/images/laptop2.jpg);
   background-size: cover;
@@ -660,4 +541,109 @@ article .text-box {
   background: transparent;
   color: white;
   font-weight: normal;
+}
+
+
+/*-------Form-in-contact-page-------*/
+
+#contactPage section {
+  display: flex;
+  min-height: 80vh;
+}
+
+#contactPage section .text-box {
+  width: 50%;
+}
+
+input {
+  color: #8b8b8b;
+  padding-left: 5px;
+  width: 100%;
+  border: 2px solid silver;
+  background: white;
+  height: 40px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input:focus {
+  border-color: #7a7a7a;
+}
+
+label {
+  visibility: hidden;
+}
+
+.mistake input {
+  border-color: #e4442a;
+}
+
+.good input {
+  border-color: limegreen;
+}
+
+.visible label {
+  visibility: visible;
+}
+
+.hidden label {
+  visibility: hidden;
+}
+
+.mail:invalid {
+  border: 2px solid #ff7a65;
+}
+
+.mail:valid {
+  border: 2px solid limegreen;
+}
+
+form {
+  display: flex;
+  width: 50%;
+  flex-flow: wrap;
+  background: #F8F8F8;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+form div {
+  width: 100%;
+}
+
+form h3 {
+  width: 100%;
+  text-align: center;
+}
+
+form textarea {
+  width: 100%;
+  margin: 20px 0;
+  height: 100px;
+  resize: none;
+  border: 2px solid silver;
+  padding: 10px;
+  position: static;
+}
+
+form button {
+  margin: 6px auto;
+  padding: 10px 20px;
+  border: 0;
+  border-bottom: 3px solid gray;
+  background: #3c3c3c;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form button:hover {
+  opacity: .9;
+}
+
+form button:active {
+  border: 0;
+  margin: 9px auto 6px;
 }
