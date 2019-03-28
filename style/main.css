@@ -53,6 +53,11 @@ body {
   color: rgb(60, 60, 60);
 }
 
+h3 {
+  width: 100%;
+  text-align: center;
+}
+
 .container {
   width: 100%;
   box-sizing: border-box;
@@ -340,8 +345,17 @@ nav .back-drop {
     order: 1;
   }
 
-  div#contactPage .text-box {
+  div#contactPage div.text-box {
     order: 2;
+    width: 100%;
+  }
+
+  div#contactPage section .text-box .address-box {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-bottom: 2px solid silver;
+    padding: 80px 0;
   }
 }
 
@@ -440,20 +454,15 @@ article .text-box {
   opacity: 0.8;
 }
 
-#bioPage .bio-box {
+#bioPage section article {
+  justify-content: center;
+}
+
+#bioPage section article .text-box {
   width: 50%;
-  border: 2px solid silver;
 }
 
-#bioPage .bio-content {
-  display: flex;
-  box-sizing: border-box;
-  padding: 20px 0;
-}
-
-#bioPage .bio-content h3 {
-  margin: 0 10px;
-}
+/*-------Service-page-------*/
 
 #servicePage article {
   display: flex;
@@ -558,7 +567,7 @@ article .text-box {
 }
 
 
-/*-------Form-in-contact-page-------*/
+/*-------Contact-page-------*/
 
 #contactPage section {
   display: flex;
@@ -567,6 +576,35 @@ article .text-box {
 
 #contactPage section .text-box {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactPage section .text-box .address-box {
+  width: 90%;
+  height: 90%;
+  border: 2px solid silver;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  text-align: center;
+}
+
+#contactPage section .text-box .address-box i {
+  font-size: 1.4em;
+}
+
+#contactPage section .text-box .address-box a {
+  color: rgb(60, 60, 60);
+  text-decoration: none;
+}
+
+#contactPage section .text-box .address-box div div {
+  margin: 10px 0;
 }
 
 input {
@@ -626,11 +664,6 @@ form div {
   width: 100%;
 }
 
-form h3 {
-  width: 100%;
-  text-align: center;
-}
-
 form textarea {
   width: 100%;
   margin: 20px 0;
@@ -638,7 +671,7 @@ form textarea {
   resize: none;
   border: 2px solid silver;
   padding: 10px;
-  position: static;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 form button {
