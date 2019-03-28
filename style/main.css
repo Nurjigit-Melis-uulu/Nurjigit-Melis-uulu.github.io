@@ -1,13 +1,14 @@
 @font-face {
-  font-family: "fontello";
-  src: url("./font/fontello.eot");
-  src: url("./font/fontello.eot") format("embedded-opentype"),
-    url("./font/fontello.woff") format("woff"),
-    url("./font/fontello.tt") format("truetype"),
-    url("./font/fontello.svg") format("svg");
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?58313222');
+  src: url('./font/fontello.eot?58313222#iefix') format('embedded-opentype'),
+    url('./font/fontello.woff?58313222') format('woff'),
+    url('./font/fontello.ttf?58313222') format('truetype'),
+    url('./font/fontello.svg?58313222#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 
 .demo-icon {
   font-family: "fontello";
@@ -18,7 +19,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: 0.2em;
+  margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
 
@@ -31,7 +32,7 @@
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: 0.2em;
+  margin-left: .2em;
 
   /* You can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -338,6 +339,7 @@ nav .back-drop {
     width: 100%;
     order: 1;
   }
+
   div#contactPage .text-box {
     order: 2;
   }
