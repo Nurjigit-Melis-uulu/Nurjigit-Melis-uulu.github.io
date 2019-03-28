@@ -329,6 +329,18 @@ nav .back-drop {
     display: flex;
     flex-flow: column;
   }
+
+  div#contactPage section {
+    flex-flow: column-reverse;
+  }
+
+  div#contactPage section form {
+    width: 100%;
+    order: 1;
+  }
+  div#contactPage .text-box {
+    order: 2;
+  }
 }
 
 article {
