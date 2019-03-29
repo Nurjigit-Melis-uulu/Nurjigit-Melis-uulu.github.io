@@ -423,22 +423,6 @@ article .text-box {
   display: none;
 }
 
-.portfolio-box {
-  width: 100%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-}
-
-.work {
-  width: 30%;
-  min-width: 280px;
-  height: 300px;
-  box-shadow: 1px 1px 6px silver;
-  border-radius: 2px;
-  margin: 5px;
-}
-
 .download-link {
   display: block;
   width: 150px;
@@ -693,4 +677,84 @@ form button:hover {
 form button:active {
   border: 0;
   margin: 9px auto 6px;
+}
+
+
+/*-------Portfolio-page-------*/
+
+.portfolio-box {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.work {
+  width: 30%;
+  min-width: 280px;
+  height: 300px;
+  box-shadow: 1px 1px 6px silver;
+  border-radius: 2px;
+  margin: 5px;
+  position: relative;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+}
+
+.work .info {
+  width: 100%;
+  height: 50px;
+  background: rgb(0, 0, 0, .8);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.info div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.info div button {
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  opacity: 0;
+  outline: none;
+  transition: all .3s;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.work:hover .info {
+  height: 100%;
+  background: rgb(0, 0, 0, .6);
+}
+
+.work:hover .info div {
+  opacity: 1;
+  justify-content: space-around;
+}
+
+.work:hover .info button {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  transition: all 1s;
+}
+
+.work .info button:hover {
+  border: 2px solid yellow;
+  color: yellow;
 }
