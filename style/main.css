@@ -425,7 +425,7 @@ article .text-box {
 
 .download-link {
   display: block;
-  width: 150px;
+  width: 180px;
   text-align: center;
   padding: 8px 0;
   background: #3c3c3c;
@@ -514,6 +514,10 @@ article .text-box {
 
 .carousel-content div p {
   max-width: 600px;
+}
+
+.carousel-content i /*---icon---*/ {
+  font-size: 2em;
 }
 
 .slide-pos {
