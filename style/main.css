@@ -701,7 +701,7 @@ form button:active {
 
 .work img {
   width: 100%;
-  height: inherit;
+  height: 300px;
 }
 
 .work .info {
