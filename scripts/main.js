@@ -158,7 +158,8 @@ window.addEventListener("scroll", function (event) {
 });
 
 function windowZero() {
-  window.getBoundingClientRect().top = 0;
+  let winPos = window.getBoundingClientRect().top;
+  winPos = 0;
 }
 
 function checkButtonInService() {

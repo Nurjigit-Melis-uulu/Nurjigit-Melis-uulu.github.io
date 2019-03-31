@@ -74,7 +74,7 @@ section {
 
 footer {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   background: rgb(1, 10, 26);
   color: white;
   display: flex;
@@ -87,7 +87,7 @@ footer {
 
 footer .footer-logo {
   position: absolute;
-  top: calc(50% - 30px);
+  top: calc(30% - 30px);
   left: calc(50% - 20px);
   width: 40px;
   height: 60px;
@@ -101,10 +101,12 @@ footer .footer-logo img {
   height: 40px;
 }
 
-footer div small {
+footer .footer-text small {
   display: flex;
-  width: 300px;
-  justify-content: center;
+  width: 100%;
+  height: 80px;
+  flex-flow: column;
+  justify-content: space-around;
 }
 
 footer a {
@@ -263,6 +265,10 @@ nav .drawer {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+nav .drawer ul li {
+  margin: 0 10px;
+}
+
 nav .back-drop {
   display: none;
   position: fixed;
@@ -357,6 +363,10 @@ nav .back-drop {
     border-bottom: 2px solid silver;
     padding: 80px 0;
   }
+
+  div#bioPage section article .text-box {
+    width: 100%;
+  }
 }
 
 article {
@@ -438,6 +448,8 @@ article .text-box {
   opacity: 0.8;
 }
 
+/*-------bio-page-------*/
+
 #bioPage section article {
   justify-content: center;
 }
@@ -516,7 +528,10 @@ article .text-box {
   max-width: 600px;
 }
 
-.carousel-content i /*---icon---*/ {
+.carousel-content i
+
+/*---icon---*/
+  {
   font-size: 2em;
 }
 
