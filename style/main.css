@@ -1,14 +1,13 @@
 @font-face {
-  font-family: 'fontello';
-  src: url('./font/fontello.eot?58313222');
-  src: url('./font/fontello.eot?58313222#iefix') format('embedded-opentype'),
-    url('./font/fontello.woff?58313222') format('woff'),
-    url('./font/fontello.ttf?58313222') format('truetype'),
-    url('./font/fontello.svg?58313222#fontello') format('svg');
+  font-family: "fontello";
+  src: url("./font/fontello.eot?58313222");
+  src: url("./font/fontello.eot?58313222#iefix") format("embedded-opentype"),
+    url("./font/fontello.woff?58313222") format("woff"),
+    url("./font/fontello.ttf?58313222") format("truetype"),
+    url("./font/fontello.svg?58313222#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 
 .demo-icon {
   font-family: "fontello";
@@ -19,7 +18,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   /* opacity: .8; */
 
@@ -32,7 +31,7 @@
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  margin-left: 0.2em;
 
   /* You can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -119,10 +118,12 @@ header {
   height: 100vh;
   color: white;
   text-align: center;
-  background: radial-gradient(circle at center center,
+  background: radial-gradient(
+    circle at center center,
     #3b4da0,
     #04034b,
-    #000000);
+    #000000
+  );
   text-shadow: 2px 2px 3px black;
   display: flex;
   justify-content: center;
@@ -285,6 +286,11 @@ nav .back-drop {
   article {
     flex-flow: column;
   }
+  div.work {
+    width: 80%;
+    min-width: 80%;
+    margin: 10px auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -366,6 +372,18 @@ nav .back-drop {
 
   div#bioPage section article .text-box {
     width: 100%;
+  }
+}
+@media (max-width: 970px) {
+  div.work {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 500px) {
+  div.work {
+    width: 100%;
+    min-width: 100%;
+    margin: 10px auto;
   }
 }
 
@@ -531,7 +549,7 @@ article .text-box {
 .carousel-content i
 
 /*---icon---*/
-  {
+ {
   font-size: 2em;
 }
 
@@ -568,7 +586,6 @@ article .text-box {
   color: white;
   font-weight: normal;
 }
-
 
 /*-------Contact-page-------*/
 
@@ -658,7 +675,7 @@ form {
   display: flex;
   width: 50%;
   flex-flow: wrap;
-  background: #F8F8F8;
+  background: #f8f8f8;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -690,14 +707,13 @@ form button {
 }
 
 form button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 form button:active {
   border: 0;
   margin: 9px auto 6px;
 }
-
 
 /*-------Portfolio-page-------*/
 
@@ -726,7 +742,7 @@ form button:active {
 .work .info {
   width: 100%;
   height: 50px;
-  background: rgb(0, 0, 0, .8);
+  background: rgb(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -750,7 +766,7 @@ form button:active {
   border-radius: 100%;
   opacity: 0;
   outline: none;
-  transition: all .3s;
+  transition: all 0.3s;
   border: 2px solid white;
   background: transparent;
   color: white;
@@ -758,7 +774,7 @@ form button:active {
 
 .work:hover .info {
   height: 100%;
-  background: rgb(0, 0, 0, .6);
+  background: rgb(0, 0, 0, 0.6);
 }
 
 .work:hover .info div {
