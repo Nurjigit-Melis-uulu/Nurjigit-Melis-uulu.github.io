@@ -3,6 +3,13 @@ const navLinks = document.querySelectorAll("nav a");
 const content = document.querySelectorAll(".content");
 const arrayForButtonNav = [1];
 const arrayForButtonAside = [1];
+//----------------------------User-information----------------------------
+let username = "";
+let userSurname = "";
+let userAddress = "";
+let userEmail = "";
+let userText = "";
+//------------------------------------------------------------------------
 let menuUl = document.querySelector("#show-menu");
 let menuBox = document.querySelector(".menu-box");
 let inputFocus = document.querySelectorAll("input");
@@ -22,6 +29,8 @@ let body = document.querySelector("body");
 let linkInFooter = document.querySelector("footer a");
 let lineSkill = document.querySelectorAll("div.line");
 let skillsValue = document.querySelectorAll(".line div");
+let textarea = document.querySelector('form textarea');
+let linkMailto = document.querySelector('form a');
 
 backDrop.addEventListener("click", function () {
   drawer.style.transform = "translate(-100%)";
@@ -46,7 +55,7 @@ email.addEventListener("change", function () {
 for (var i = 0; i < inputFocus.length; i++) {
   let parentInput = inputFocus[i].parentElement;
 
-  inputFocus[i].addEventListener("input", function () {
+  inputFocus[i].addEventListener("input", function (event) {
     if (this.value.length > 0) {
       parentInput.classList.add("visible");
       parentInput.classList.remove("hidden");
@@ -54,7 +63,18 @@ for (var i = 0; i < inputFocus.length; i++) {
       parentInput.classList.add("hidden");
       parentInput.classList.remove("visible");
     }
+
+    if (event.path[0].id == "name") {
+      username = this.value;
+    } else if (event.path[0].id == "surname") {
+      userSurname = this.value;
+    } else if (event.path[0].id == "address") {
+      userAddress = this.value;
+    } else if (event.path[0].id == "email") {
+      userEmail = this.value;
+    }
   });
+
   inputFocus[i].addEventListener("change", function () {
     if (this.value.length > 0) {
       parentInput.classList.add("good");
@@ -67,6 +87,14 @@ for (var i = 0; i < inputFocus.length; i++) {
     }
   });
 }
+
+textarea.addEventListener('input', function () {
+  userText = this.value;
+});
+
+linkMailto.addEventListener('click', function () {
+  linkMailto.href = "mailto:nurjigit.melis.uulu@gmail.com?subject=" + userText;
+});
 /*
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
