@@ -11,20 +11,44 @@
   color: white;
 }
 
-.Header p {
-  font-size: 1.2em;
+.Header p.homePageTitle {
+  font-size: 1.6em;
   display: flex;
   flex-flow: column;
   text-transform: uppercase;
   text-align: center;
 }
 
-.Header p span:nth-child(2) {
+.Header p.homePageTitle span:nth-child(2) {
   font-size: 1.93em;
-  font-family: 'Roboto', sans-serif;
 }
 
-.Header p span:nth-child(4) {
-  font-size: 1.8em;
+.Header p.homePageTitle span:nth-child(2n + 2) {
+  color: transparent;
   font-family: 'Roboto', sans-serif;
+  background-image: url(../../assets/images/elements/textBg.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 100% 0;
+  background-size: 50%;
+  transition: background .8s;
+  text-shadow: 0px 0px 10px rgb(235, 235, 235, .5);
+}
+
+.Header p.homePageTitle span:nth-child(2n + 2) {
+  animation: headerText 3s infinite linear;
+}
+
+@-webkit-keyframes headerText {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.Header p.homePageTitle span:nth-child(4) {
+  font-size: 1.79em;
 }

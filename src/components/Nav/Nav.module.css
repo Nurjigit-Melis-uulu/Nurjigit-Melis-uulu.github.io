@@ -34,7 +34,7 @@
 }
 
 .Nav ul li a:hover {
-  color: rgb(255, 115, 0);
+  color: #ff7300;
 }
 
 .Nav ul li a.active {
