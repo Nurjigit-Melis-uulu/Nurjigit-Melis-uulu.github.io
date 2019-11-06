@@ -9,6 +9,7 @@ import Works from "../../components/Pages/Works/Works";
 import About from "../../components/Pages/About/About";
 import Contacts from "../../components/Pages/Contacts/Contacts";
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 class Layout extends Component {
   state = {};
@@ -16,6 +17,7 @@ class Layout extends Component {
     return (
       <div className={classes.Layout}>
         <Nav />
+        <Header />
         <Route path="/" exact component={Home} />
         <Route path="/Services" exact component={Services} />
         <Route path="/Works" exact component={Works} />
