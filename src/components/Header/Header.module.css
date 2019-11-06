@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+
+.Header {
+  width: 100%;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #010505;
+  color: white;
+}
+
+.Header p {
+  font-size: 1.2em;
+  display: flex;
+  flex-flow: column;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Header p span:nth-child(2) {
+  font-size: 1.93em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Header p span:nth-child(4) {
+  font-size: 1.8em;
+  font-family: 'Roboto', sans-serif;
+}
