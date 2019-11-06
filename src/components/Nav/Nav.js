@@ -5,15 +5,17 @@ import classes from "./Nav.module.css";
 
 function Nav(props) {
   return (
-    <div className={classes.Nav}>
+    <nav className={classes.Nav}>
       <div className={classes.logo}>
-        <NavLink to="/">
+        <NavLink exact to="/">
           <img src="" alt="logo" />
         </NavLink>
       </div>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
         </li>
         <li>
           <NavLink to="/Services">Services</NavLink>
@@ -28,7 +30,7 @@ function Nav(props) {
           <NavLink to="/Contacts">Contacts</NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 

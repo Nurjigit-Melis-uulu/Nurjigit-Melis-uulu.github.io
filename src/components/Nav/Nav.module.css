@@ -1,0 +1,42 @@
+.Nav {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #020808;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.Nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.Nav ul li {
+  margin: 0 5px;
+  position: relative;
+}
+
+.Nav ul li a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.Nav ul li a:hover {
+  color: rgb(255, 115, 0);
+}
+
+.Nav ul li a.active {
+  text-decoration: underline;
+}
