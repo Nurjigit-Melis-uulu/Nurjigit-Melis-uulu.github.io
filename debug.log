@@ -1,0 +1,42 @@
+[1110/160731.194:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.251:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.251:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.253:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.253:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.257:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.257:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.260:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.261:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.263:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.263:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.265:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.425:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.429:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.429:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.432:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.432:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.435:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.447:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.450:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.450:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.458:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.458:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.463:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.463:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.466:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.467:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.469:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.469:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.472:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.629:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.631:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.631:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.633:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.633:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.637:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[1110/160731.642:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd8640000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.645:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[1110/160731.645:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd7ae0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.648:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[1110/160731.648:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffdd4d40000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[1110/160731.650:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll

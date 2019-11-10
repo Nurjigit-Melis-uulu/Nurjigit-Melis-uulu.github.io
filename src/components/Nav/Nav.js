@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import classes from "./Nav.module.css";
 
@@ -7,27 +6,25 @@ function Nav(props) {
   return (
     <nav className={classes.Nav}>
       <div className={classes.logo}>
-        <NavLink exact to="/">
+        <a href="#top">
           <img src="" alt="logo" />
-        </NavLink>
+        </a>
       </div>
       <ul>
         <li>
-          <NavLink exact to="/">
-            Home
-          </NavLink>
+          <a href="#top">Home</a>
         </li>
         <li>
-          <NavLink to="/Services">Services</NavLink>
+          <a href="#Services">Services</a>
         </li>
         <li>
-          <NavLink to="/Works">Works</NavLink>
+          <a href="#Works">Works</a>
         </li>
         <li>
-          <NavLink to="/About">About me</NavLink>
+          <a href="#About">About me</a>
         </li>
         <li>
-          <NavLink to="/Contacts">Contacts</NavLink>
+          <a href="#Contacts">Contacts</a>
         </li>
       </ul>
     </nav>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-import Home from "../../components/Pages/Home/Home";
 import classes from "./Layout.module.css";
 import Nav from "../../components/Nav/Nav";
 import Services from "../../components/Pages/Services/Services";
@@ -18,10 +17,9 @@ class Layout extends Component {
       <div className={classes.Layout}>
         <Nav />
         <Header />
-        <Route path="/" exact component={Home} />
+        <Route path="/About" exact component={About} />
         <Route path="/Services" exact component={Services} />
         <Route path="/Works" exact component={Works} />
-        <Route path="/About" exact component={About} />
         <Route path="/Contacts" exact component={Contacts} />
         <Footer />
       </div>

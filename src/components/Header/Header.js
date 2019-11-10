@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 
 function Header(props) {
   return (
-    <div className={classes.Header}>
+    <header className={classes.Header}>
       <div>
         <p className={classes.homePageTitle}>
           <span>&mdash;&mdash; Welcome! My name is &mdash;&mdash;</span>
@@ -12,7 +12,7 @@ function Header(props) {
           <span>Front-End developer</span>
         </p>
       </div>
-    </div>
+    </header>
   );
 }
 
