@@ -79,13 +79,7 @@ nav a:active::after {
 header {
   width: 100%;
   height: 600px;
-}
-
-.content {
-  width: 100%;
-  max-width: 1000px;
-  box-sizing: border-box;
-  padding: 20px;
+  background: rgb(10, 10, 10);
 }
 
 header {
@@ -133,4 +127,65 @@ header span {
   background: #b3681d;
   color: white;
   font-weight: bolder;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.features {
+  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 19px 0 85px;
+}
+
+.feature {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 25%;
+  min-width: 240px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.feature i {
+  font-size: 2.8em;
+  margin: 20px 0;
+}
+
+.feature h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.feature span {
+  width: 70px;
+  height: 3px;
+  display: block;
+  margin: 5px auto 0;
+  background: rgb(239, 238, 236);
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+
+.feature:hover p,
+.feature:hover h2,
+.feature:hover i {
+  color: #C6AF95;
+}
+
+.feature:hover span {
+  background: #C6AF95;
 }
