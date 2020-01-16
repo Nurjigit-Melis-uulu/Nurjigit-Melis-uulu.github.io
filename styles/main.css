@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #000;
   color: white;
 }
@@ -36,40 +36,25 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  align-items: center;
 }
 
 nav ul li a {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-bottom: 2px solid transparent;
+  padding: 0 10px;
 }
 
-nav a::after {
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: white;
-  transition: width .4s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a:active {
-  color: #0082D2;
-}
-
-nav a:active::after {
-  background: #0082D2;
+nav a:hover {
+  border-bottom-color: white;
 }
 
 /*--End-of-the-navigation-code-section--*/
@@ -171,7 +156,7 @@ header span {
   height: 3px;
   display: block;
   margin: 5px auto 0;
-  background: rgb(239, 238, 236);
+  background: white;
 }
 
 .feature p {
@@ -183,9 +168,9 @@ header span {
 .feature:hover p,
 .feature:hover h2,
 .feature:hover i {
-  color: #C6AF95;
+  color: #0082D2;
 }
 
 .feature:hover span {
-  background: #C6AF95;
+  background: #0082D2;
 }
