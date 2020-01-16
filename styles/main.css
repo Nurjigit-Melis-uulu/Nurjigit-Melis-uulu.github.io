@@ -102,16 +102,17 @@ header span {
   font-weight: bolder;
 }
 
-.btn-orange {
-  border-color: #b3681d;
-  color: #b3681d;
+.btn-white {
+  border-color: #dadada;
+  color: #dadada;
   background: #000;
+  font-weight: bolder;
 }
 
-.btn-orange:hover {
-  background: #b3681d;
+.btn-white:hover {
+  background: white;
   color: white;
-  font-weight: bolder;
+  color: #000;
 }
 
 .content {
@@ -127,7 +128,7 @@ header span {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  padding: 19px 0 85px;
+  padding: 20px 0 80px;
 }
 
 .feature {
@@ -141,13 +142,13 @@ header span {
 }
 
 .feature i {
-  font-size: 2.8em;
-  margin: 20px 0;
+  font-size: 2.4em;
+  margin: 15px 0;
 }
 
 .feature h2 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0;
 }
 
@@ -156,7 +157,7 @@ header span {
   height: 3px;
   display: block;
   margin: 5px auto 0;
-  background: white;
+  background: #0082D2;
 }
 
 .feature p {

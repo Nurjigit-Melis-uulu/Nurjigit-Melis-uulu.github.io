@@ -19,9 +19,7 @@ for (let i = 0; i < links.length; i++) {
     }
   });
 
-  element.addEventListener("click", function(e) {
-    e.preventDefault();
-
+  element.addEventListener("click", function() {
     const blockID = element.getAttribute("href");
 
     if (element.getAttribute("href") === "#") {
